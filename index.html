@@ -1282,7 +1282,348 @@
     navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current || (current === '' && a.getAttribute('href') === '#')));
   });
   </script>
-  <!-- Mod System — loads MODS array and auto-renders cards -->
-  <script src="script.js"></script>
+  <!-- =====================================================
+       MOD SYSTEM — Edit the MODS array to add your mods
+  ====================================================== -->
+  <script>
+  // ============================================================
+  //  HOW TO ADD A MOD:
+  //  1. Copy one { } block inside the MODS array below
+  //  2. Fill in your details
+  //  3. Save — cards appear automatically on reload
+  // ============================================================
+
+  const MODS = [
+    // ── ANIME MODS ────────────────────────────────────────
+    {
+      title: "Naruto & Sasuke Skin Pack",
+      game: "GTA SA",
+      category: "Anime",
+      tag: "🔥 Hot",
+      image: "https://placehold.co/400x220/1a0030/ff003c?text=Naruto+Pack&font=orbitron",
+      description: "Replace CJ with Naruto or Sasuke — complete with custom textures, headband, and kunai weapon model. 2 skins included.",
+      downloadUrl: "https://www.mediafire.com/",   // 👈 PASTE YOUR DOWNLOAD LINK HERE
+      downloads: "22.4K",
+      rating: 5.0,
+      version: "v2.1",
+      size: "18 MB",
+    },
+    {
+      title: "Dragon Ball Z Goku Pack",
+      game: "GTA SA",
+      category: "Anime",
+      tag: "⭐ Top Rated",
+      image: "https://placehold.co/400x220/100030/9b00ff?text=Goku+Pack&font=orbitron",
+      description: "Play as Goku in Super Saiyan form. Includes custom aura particle effect, orange gi skin and kamehameha sound replacement.",
+      downloadUrl: "https://www.mediafire.com/",   // 👈 PASTE YOUR DOWNLOAD LINK HERE
+      downloads: "19.1K",
+      rating: 4.9,
+      version: "v1.4",
+      size: "24 MB",
+    },
+    {
+      title: "Demon Slayer Tanjiro Skin",
+      game: "GTA SA",
+      category: "Anime",
+      tag: "🆕 New",
+      image: "https://placehold.co/400x220/0a001a/ff0080?text=Tanjiro+Skin&font=orbitron",
+      description: "High-quality Tanjiro Kamado skin with Nichirin sword weapon replacement and Water Breathing visual effect overlay.",
+      downloadUrl: "https://www.mediafire.com/",   // 👈 PASTE YOUR DOWNLOAD LINK HERE
+      downloads: "11.7K",
+      rating: 4.8,
+      version: "v1.0",
+      size: "15 MB",
+    },
+    // ── CAR MODS ──────────────────────────────────────────
+    {
+      title: "JDM Neon Street Pack",
+      game: "Vice City",
+      category: "Cars",
+      tag: "⚡ Popular",
+      image: "https://placehold.co/400x220/001020/00d4ff?text=JDM+Pack&font=orbitron",
+      description: "12 authentic JDM cars — Supra, RX-7, Evo IX — with neon underglow, custom handling lines and engine sound replacements.",
+      downloadUrl: "https://www.mediafire.com/",   // 👈 PASTE YOUR DOWNLOAD LINK HERE
+      downloads: "14.8K",
+      rating: 4.8,
+      version: "v3.0",
+      size: "42 MB",
+    },
+    {
+      title: "Cyberpunk Bike Collection",
+      game: "GTA SA",
+      category: "Cars",
+      tag: "🎨 Visual",
+      image: "https://placehold.co/400x220/001a10/00ff88?text=Cyber+Bikes&font=orbitron",
+      description: "5 futuristic motorcycles inspired by Cyberpunk 2077 — light trails, LED chassis glow and custom wheel textures.",
+      downloadUrl: "https://www.mediafire.com/",   // 👈 PASTE YOUR DOWNLOAD LINK HERE
+      downloads: "8.3K",
+      rating: 4.7,
+      version: "v1.2",
+      size: "31 MB",
+    },
+    // ── GRAPHICS MODS ─────────────────────────────────────
+    {
+      title: "CyberpunkCity ENB Shader",
+      game: "GTA SA",
+      category: "Graphics",
+      tag: "🏆 Best",
+      image: "https://placehold.co/400x220/000a1a/00d4ff?text=ENB+Shader&font=orbitron",
+      description: "Transforms Los Santos into a rain-soaked neon cyberpunk city. Includes bloom, volumetric fog, rain reflections and chromatic aberration.",
+      downloadUrl: "https://www.mediafire.com/",   // 👈 PASTE YOUR DOWNLOAD LINK HERE
+      downloads: "28.5K",
+      rating: 5.0,
+      version: "v4.1",
+      size: "90 MB",
+    },
+    {
+      title: "Neon Vice Night ENB",
+      game: "Vice City",
+      category: "Graphics",
+      tag: "🌃 Night",
+      image: "https://placehold.co/400x220/1a000a/ff003c?text=Vice+ENB&font=orbitron",
+      description: "Deep neon nights for Vice City. Recolors ambient lighting, adds lens flare to street lamps and intensifies sunset colours.",
+      downloadUrl: "https://www.mediafire.com/",   // 👈 PASTE YOUR DOWNLOAD LINK HERE
+      downloads: "16.2K",
+      rating: 4.9,
+      version: "v2.3",
+      size: "55 MB",
+    },
+    // ── WEAPON MODS ───────────────────────────────────────
+    {
+      title: "Katana & Kunai Pack",
+      game: "GTA SA",
+      category: "Weapons",
+      tag: "⚔️ Anime",
+      image: "https://placehold.co/400x220/100010/ff00ff?text=Katana+Pack&font=orbitron",
+      description: "Replaces melee weapons with anime-style katanas and kunai. Includes glowing blade textures and custom slash sound effects.",
+      downloadUrl: "https://www.mediafire.com/",   // 👈 PASTE YOUR DOWNLOAD LINK HERE
+      downloads: "9.5K",
+      rating: 4.7,
+      version: "v1.1",
+      size: "12 MB",
+    },
+    // ── MAP MODS ──────────────────────────────────────────
+    {
+      title: "Tokyo Downtown Map Add-on",
+      game: "GTA SA",
+      category: "Maps",
+      tag: "🗺️ Map",
+      image: "https://placehold.co/400x220/001510/00ffcc?text=Tokyo+Map&font=orbitron",
+      description: "Adds a detailed Tokyo district to San Andreas — neon-lit streets, convenience stores, arcades and a functioning train station.",
+      downloadUrl: "https://www.mediafire.com/",   // 👈 PASTE YOUR DOWNLOAD LINK HERE
+      downloads: "7.1K",
+      rating: 4.6,
+      version: "v0.9",
+      size: "68 MB",
+    },
+  ];
+
+  // ── Colour map per category ──────────────────────────────
+  const CAT_COLORS = {
+    Anime:    { border: "#ff00ff", glow: "rgba(255,0,255,0.18)",  badge: "#ff00ff" },
+    Cars:     { border: "#00d4ff", glow: "rgba(0,212,255,0.18)",  badge: "#00d4ff" },
+    Graphics: { border: "#9b00ff", glow: "rgba(155,0,255,0.18)",  badge: "#9b00ff" },
+    Weapons:  { border: "#ff003c", glow: "rgba(255,0,60,0.18)",   badge: "#ff003c" },
+    Maps:     { border: "#00ff88", glow: "rgba(0,255,136,0.18)",  badge: "#00ff88" },
+    Scripts:  { border: "#ffcc00", glow: "rgba(255,204,0,0.18)",  badge: "#ffcc00" },
+    Skins:    { border: "#ff0080", glow: "rgba(255,0,128,0.18)",  badge: "#ff0080" },
+  };
+
+  // ── Star renderer ────────────────────────────────────────
+  function renderStars(rating) {
+    let html = '<span class="smh-stars">';
+    for (let i = 1; i <= 5; i++) {
+      if (rating >= i)         html += '<span style="color:#ffcc00">★</span>';
+      else if (rating >= i-.5) html += '<span style="color:#ffcc0099">★</span>';
+      else                     html += '<span style="color:#3a3a55">☆</span>';
+    }
+    return html + '</span>';
+  }
+
+  // ── Build one card HTML ──────────────────────────────────
+  function buildCard(mod, index) {
+    const col = CAT_COLORS[mod.category] || CAT_COLORS["Anime"];
+    const delay = (index % 5) * 80;
+    return `
+      <div class="smh-card"
+           data-category="${mod.category}"
+           data-game="${mod.game}"
+           style="
+             --card-border:${col.border};
+             --card-glow:${col.glow};
+             opacity:0;
+             transform:translateY(22px);
+             transition:opacity .5s ease ${delay}ms, transform .5s ease ${delay}ms,
+                         box-shadow .32s ease, border-color .32s ease;
+           ">
+        <div class="smh-thumb">
+          <img src="${mod.image}"
+               alt="${mod.title}"
+               loading="lazy"
+               onerror="this.src='https://placehold.co/400x220/0a0a18/9b00ff?text=No+Image&font=orbitron'" />
+          <span class="smh-tag">${mod.tag || mod.category}</span>
+          <span class="smh-ver">${mod.version || "v1.0"}</span>
+        </div>
+        <div class="smh-body">
+          <div class="smh-row">
+            <span class="smh-game">${mod.game}</span>
+            <span class="smh-catbadge" style="border-color:${col.badge};color:${col.badge}">${mod.category}</span>
+          </div>
+          <h3 class="smh-title">${mod.title}</h3>
+          <p  class="smh-desc">${mod.description}</p>
+          <div class="smh-rating">
+            ${renderStars(mod.rating)}
+            <span class="smh-rnum">${mod.rating.toFixed(1)}</span>
+          </div>
+          <div class="smh-footer">
+            <div class="smh-meta">
+              <span>⬇ ${mod.downloads}</span>
+              <span>💾 ${mod.size || "?"}</span>
+            </div>
+            <a href="${mod.downloadUrl}"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="smh-dl-btn"
+               aria-label="Download ${mod.title}">
+              ⬇ Download
+            </a>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  // ── Render mods into #modsGrid ───────────────────────────
+  function renderMods(list) {
+    const grid = document.getElementById("modsGrid");
+    if (!grid) return;
+    const source = list !== undefined ? list : MODS;
+    if (source.length === 0) {
+      grid.innerHTML = `
+        <div style="grid-column:1/-1;text-align:center;padding:4rem 1rem;color:#55556a">
+          <div style="font-size:3rem;margin-bottom:1rem">🔍</div>
+          <p style="font-family:'Rajdhani',sans-serif;font-size:1rem;margin-bottom:1.5rem">No mods found.</p>
+          <button class="btn-ghost" onclick="renderMods()">Show All Mods</button>
+        </div>`;
+      return;
+    }
+    grid.innerHTML = source.map(buildCard).join("");
+    // Trigger reveal
+    requestAnimationFrame(() => {
+      grid.querySelectorAll(".smh-card").forEach(el => {
+        el.style.opacity = "1";
+        el.style.transform = "translateY(0)";
+      });
+    });
+  }
+
+  // ── Filters ──────────────────────────────────────────────
+  function filterByCategory(cat) { renderMods(MODS.filter(m => m.category === cat)); }
+  function filterByGame(game)     { renderMods(MODS.filter(m => m.game === game)); }
+  function filterBySearch(q) {
+    const s = q.toLowerCase().trim();
+    if (!s) { renderMods(); return; }
+    renderMods(MODS.filter(m =>
+      m.title.toLowerCase().includes(s) ||
+      m.description.toLowerCase().includes(s) ||
+      m.category.toLowerCase().includes(s) ||
+      m.game.toLowerCase().includes(s)
+    ));
+  }
+
+  // ── Inline card styles ───────────────────────────────────
+  const SMH_STYLES = `
+    #modsGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.5rem}
+    .smh-card{background:rgba(15,15,35,.78);border:1px solid var(--card-border,rgba(155,0,255,.35));
+      backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:18px;
+      overflow:hidden;display:flex;flex-direction:column;position:relative}
+    .smh-card::before{content:"";position:absolute;inset:0;
+      background:radial-gradient(ellipse 80% 60% at 50% 0%,var(--card-glow,rgba(155,0,255,.12)),transparent 70%);
+      opacity:0;transition:opacity .32s;pointer-events:none;z-index:0}
+    .smh-card:hover::before{opacity:1}
+    .smh-card:hover{transform:translateY(-7px) !important;
+      box-shadow:0 20px 60px rgba(0,0,0,.45),0 0 28px var(--card-glow,rgba(155,0,255,.18));
+      border-color:var(--card-border,rgba(155,0,255,.65))}
+    .smh-thumb{position:relative;height:195px;overflow:hidden;flex-shrink:0;background:#0a0a18}
+    .smh-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+    .smh-card:hover .smh-thumb img{transform:scale(1.06)}
+    .smh-thumb::after{content:"";position:absolute;inset:0;
+      background:linear-gradient(180deg,transparent 45%,rgba(6,6,15,.82) 100%);pointer-events:none}
+    .smh-tag{position:absolute;top:.7rem;left:.7rem;z-index:2;
+      font-family:'Orbitron',sans-serif;font-size:.55rem;letter-spacing:2px;text-transform:uppercase;
+      padding:3px 10px;border-radius:50px;
+      background:linear-gradient(135deg,#ff003c,#9b00ff);color:#fff;font-weight:700}
+    .smh-ver{position:absolute;top:.7rem;right:.7rem;z-index:2;
+      font-family:'Orbitron',sans-serif;font-size:.5rem;letter-spacing:1px;
+      padding:3px 8px;border-radius:6px;
+      background:rgba(6,6,15,.75);border:1px solid rgba(155,0,255,.35);color:#a0a0c0}
+    .smh-body{padding:1.2rem 1.3rem 1.3rem;display:flex;flex-direction:column;gap:.55rem;flex:1;position:relative;z-index:1}
+    .smh-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+    .smh-game{font-family:'Orbitron',sans-serif;font-size:.58rem;letter-spacing:2.5px;
+      text-transform:uppercase;color:#9b00ff}
+    .smh-catbadge{font-family:'Orbitron',sans-serif;font-size:.52rem;letter-spacing:1.5px;
+      text-transform:uppercase;padding:2px 8px;border-radius:4px;border:1px solid;
+      background:transparent;margin-left:auto}
+    .smh-title{font-family:'Orbitron',sans-serif;font-size:.88rem;font-weight:700;
+      color:#f0f0ff;line-height:1.35;margin:0}
+    .smh-desc{font-family:'Exo 2',sans-serif;font-size:.8rem;color:#8888aa;
+      line-height:1.65;margin:0;flex:1}
+    .smh-rating{display:flex;align-items:center;gap:.4rem}
+    .smh-stars{display:flex;gap:2px;font-size:.85rem;line-height:1}
+    .smh-rnum{font-family:'Orbitron',sans-serif;font-size:.7rem;color:#a0a0c0}
+    .smh-footer{display:flex;align-items:center;justify-content:space-between;
+      margin-top:auto;padding-top:.5rem;border-top:1px solid rgba(155,0,255,.12)}
+    .smh-meta{display:flex;gap:.85rem;font-size:.72rem;color:#55556a}
+    .smh-dl-btn{display:inline-flex;align-items:center;gap:.4rem;
+      font-family:'Orbitron',sans-serif;font-size:.62rem;font-weight:700;
+      letter-spacing:1.5px;text-transform:uppercase;padding:.52rem 1.05rem;
+      border-radius:7px;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.4);
+      color:#00d4ff;text-decoration:none;
+      transition:background .25s,box-shadow .25s,transform .2s;white-space:nowrap}
+    .smh-dl-btn:hover{background:rgba(0,212,255,.18);
+      box-shadow:0 0 18px rgba(0,212,255,.28);transform:translateY(-2px);color:#00d4ff}
+    @media(max-width:640px){#modsGrid{grid-template-columns:1fr}.smh-thumb{height:170px}}
+  `;
+  (function injectStyles() {
+    const s = document.createElement("style");
+    s.textContent = SMH_STYLES;
+    document.head.appendChild(s);
+  })();
+
+  // ── Wire up search inputs ────────────────────────────────
+  function attachSearch() {
+    ["main-search","nav-search-input"].forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.addEventListener("input",  () => filterBySearch(el.value));
+      el.addEventListener("keydown", e => { if (e.key === "Enter") filterBySearch(el.value); });
+    });
+  }
+
+  // ── Wire up category cards ───────────────────────────────
+  function attachCategories() {
+    const MAP = {
+      "Skins":"Skins","Cars":"Cars","Graphics":"Graphics",
+      "Weapons":"Weapons","Maps":"Maps","Scripts":"Scripts","Anime":"Anime"
+    };
+    document.querySelectorAll(".category-card").forEach(card => {
+      card.style.cursor = "pointer";
+      card.addEventListener("click", () => {
+        const label = card.querySelector(".cat-name")?.textContent || "";
+        const key = Object.keys(MAP).find(k => label.includes(k));
+        if (key) {
+          filterByCategory(MAP[key]);
+          document.getElementById("featured")?.scrollIntoView({ behavior:"smooth" });
+        }
+      });
+    });
+  }
+
+  // ── Init on DOM ready ────────────────────────────────────
+  document.addEventListener("DOMContentLoaded", () => {
+    renderMods();
+    attachSearch();
+    attachCategories();
+  });
+  </script>
 </body>
 </html>
