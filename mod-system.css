@@ -1,0 +1,273 @@
+/* ============================================================
+   Shadow Mods Hub — mod-system.css
+   Styles for the JS-generated mod cards
+   ============================================================ */
+
+/* ── Grid layout ─────────────────────────────────────── */
+#modsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ── Mod Card base ───────────────────────────────────── */
+.smh-card {
+  background: rgba(15, 15, 35, 0.75);
+  border: 1px solid var(--card-border, rgba(155, 0, 255, 0.35));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow  0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              border-color 0.32s ease;
+  position: relative;
+}
+
+.smh-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    var(--card-glow, rgba(155, 0, 255, 0.12)),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.32s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.smh-card:hover::before { opacity: 1; }
+
+.smh-card:hover {
+  transform: translateY(-7px);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.45),
+    0 0 28px var(--card-glow, rgba(155, 0, 255, 0.18));
+  border-color: var(--card-border, rgba(155, 0, 255, 0.65));
+}
+
+/* ── Thumbnail ──────────────────────────────────────── */
+.mod-thumb {
+  position: relative;
+  height: 195px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #0a0a18;
+}
+
+.mod-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.smh-card:hover .mod-thumb img {
+  transform: scale(1.06);
+}
+
+.mod-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, rgba(6, 6, 15, 0.82) 100%);
+  pointer-events: none;
+}
+
+/* Tag badge (top-left) */
+.mod-thumb-overlay {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+  z-index: 2;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ff003c, #9b00ff);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(155, 0, 255, 0.3);
+}
+
+/* Version badge (top-right) */
+.mod-version {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  z-index: 2;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.5rem;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(6, 6, 15, 0.75);
+  border: 1px solid rgba(155, 0, 255, 0.35);
+  color: #a0a0c0;
+}
+
+/* ── Card body ──────────────────────────────────────── */
+.mod-card-body {
+  padding: 1.2rem 1.3rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.mod-top-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.mod-game-tag {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #9b00ff;
+}
+
+.mod-cat-badge {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.52rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid;
+  background: transparent;
+  margin-left: auto;
+}
+
+.mod-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #f0f0ff;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.mod-desc {
+  font-family: "Exo 2", sans-serif;
+  font-size: 0.8rem;
+  color: #8888aa;
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+}
+
+/* ── Stars ──────────────────────────────────────────── */
+.mod-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.stars { display: flex; gap: 2px; }
+
+.star        { font-size: 0.85rem; line-height: 1; }
+.star.full   { color: #ffcc00; }
+.star.half   { color: #ffcc00; opacity: 0.6; }
+.star.empty  { color: #3a3a55; }
+
+.mod-rating-num {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.7rem;
+  color: #a0a0c0;
+}
+
+/* ── Footer row ─────────────────────────────────────── */
+.mod-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(155, 0, 255, 0.12);
+}
+
+.mod-meta {
+  display: flex;
+  gap: 0.85rem;
+  font-size: 0.72rem;
+  color: #55556a;
+}
+
+/* ── Download button ────────────────────────────────── */
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.52rem 1.05rem;
+  border-radius: 7px;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  color: #00d4ff;
+  text-decoration: none;
+  transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-download:hover {
+  background: rgba(0, 212, 255, 0.18);
+  box-shadow: 0 0 18px rgba(0, 212, 255, 0.28);
+  transform: translateY(-2px);
+  color: #00d4ff;
+}
+
+/* ── No-results state ───────────────────────────────── */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #55556a;
+}
+
+.no-results-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.no-results p {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Reveal animation ───────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 640px) {
+  #modsGrid {
+    grid-template-columns: 1fr;
+  }
+  .mod-thumb { height: 170px; }
+}
