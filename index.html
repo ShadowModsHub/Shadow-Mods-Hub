@@ -1,0 +1,1284 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadow Mods Hub – GTA SA & Vice City Mods</title>
+  <meta name="description" content="Download the best GTA San Andreas and GTA Vice City mods. Shadow Mods Hub – your ultimate destination for premium GTA mods, skins, scripts and more." />
+  <meta name="keywords" content="GTA SA mods, GTA Vice City mods, GTA San Andreas download, Vice City skins, GTA modding, Shadow Mods Hub" />
+  <meta name="author" content="Shadow Mods Hub" />
+  <meta property="og:title" content="Shadow Mods Hub – GTA SA & Vice City Mods" />
+  <meta property="og:description" content="Download the best GTA San Andreas and GTA Vice City mods. Premium mods, skins, scripts and more." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="pinterest-rich-pin" content="true" />
+  <!-- Favicon SVG inline -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff003c'/%3E%3Cstop offset='1' stop-color='%237f00ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='12' fill='%230a0a0f'/%3E%3Cpolygon points='32,8 52,22 52,42 32,56 12,42 12,22' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-size='18' font-weight='900' fill='url(%23g)' font-family='Arial'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ========================
+       CSS VARIABLES & RESET
+    ======================== */
+    :root {
+      --bg-deep:       #06060f;
+      --bg-dark:       #0a0a18;
+      --bg-card:       rgba(15,15,35,0.75);
+      --bg-glass:      rgba(20,20,50,0.45);
+      --neon-red:      #ff003c;
+      --neon-purple:   #9b00ff;
+      --neon-blue:     #00d4ff;
+      --neon-pink:     #ff0080;
+      --accent-gold:   #ffcc00;
+      --text-bright:   #f0f0ff;
+      --text-mid:      #a0a0c0;
+      --text-dim:      #55556a;
+      --border-glow:   rgba(155,0,255,0.35);
+      --border-red:    rgba(255,0,60,0.4);
+      --font-display:  'Orbitron', sans-serif;
+      --font-body:     'Rajdhani', sans-serif;
+      --font-text:     'Exo 2', sans-serif;
+      --radius:        12px;
+      --radius-lg:     20px;
+      --transition:    0.3s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-deep);
+      color: var(--text-bright);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    input { font-family: inherit; }
+
+    /* ========================
+       SCROLLBAR
+    ======================== */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-deep); }
+    ::-webkit-scrollbar-thumb { background: var(--neon-purple); border-radius: 3px; }
+
+    /* ========================
+       BACKGROUND GRID
+    ======================== */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(155,0,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(155,0,255,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    /* ========================
+       NOISE OVERLAY
+    ======================== */
+    body::after {
+      content: '';
+      position: fixed; inset: 0; z-index: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    /* ========================
+       UTILITY
+    ======================== */
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; position: relative; z-index: 1; }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text-bright);
+    }
+    .section-title span.line {
+      display: inline-block; width: 40px; height: 3px;
+      background: linear-gradient(90deg, var(--neon-red), var(--neon-purple));
+      border-radius: 2px;
+    }
+    .section-title span.badge {
+      font-size: 0.6rem; letter-spacing: 3px;
+      background: linear-gradient(135deg, var(--neon-red), var(--neon-purple));
+      padding: 3px 8px; border-radius: 4px;
+      vertical-align: middle;
+    }
+    .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem; }
+    .view-all-btn {
+      font-family: var(--font-display);
+      font-size: 0.7rem; letter-spacing: 2px;
+      color: var(--neon-blue);
+      border: 1px solid rgba(0,212,255,0.3);
+      padding: 0.4rem 1rem; border-radius: 6px;
+      transition: var(--transition);
+      text-transform: uppercase;
+    }
+    .view-all-btn:hover { background: rgba(0,212,255,0.1); border-color: var(--neon-blue); box-shadow: 0 0 15px rgba(0,212,255,0.2); }
+
+    /* ========================
+       BUTTONS
+    ======================== */
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: var(--font-display); font-size: 0.75rem;
+      font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      padding: 0.75rem 1.75rem; border-radius: 8px;
+      background: linear-gradient(135deg, var(--neon-red), var(--neon-purple));
+      color: #fff;
+      box-shadow: 0 0 20px rgba(255,0,60,0.3), 0 4px 15px rgba(0,0,0,0.4);
+      transition: var(--transition);
+      position: relative; overflow: hidden;
+    }
+    .btn-primary::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
+      opacity: 0; transition: var(--transition);
+    }
+    .btn-primary:hover::before { opacity: 1; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 35px rgba(255,0,60,0.5), 0 8px 25px rgba(0,0,0,0.5); }
+    .btn-primary span { position: relative; z-index: 1; }
+
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: var(--font-display); font-size: 0.7rem;
+      font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+      padding: 0.6rem 1.4rem; border-radius: 8px;
+      border: 1px solid rgba(155,0,255,0.5);
+      color: var(--neon-purple);
+      background: rgba(155,0,255,0.07);
+      transition: var(--transition);
+    }
+    .btn-ghost:hover { background: rgba(155,0,255,0.18); border-color: var(--neon-purple); box-shadow: 0 0 20px rgba(155,0,255,0.25); transform: translateY(-1px); }
+
+    .btn-download {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      font-family: var(--font-display); font-size: 0.65rem;
+      font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 0.55rem 1.1rem; border-radius: 7px;
+      background: linear-gradient(135deg, #00d4ff22, #00d4ff11);
+      border: 1px solid rgba(0,212,255,0.45);
+      color: var(--neon-blue);
+      transition: var(--transition);
+    }
+    .btn-download:hover { background: rgba(0,212,255,0.18); box-shadow: 0 0 18px rgba(0,212,255,0.3); transform: translateY(-1px); }
+
+    /* ========================
+       GLASS CARD
+    ======================== */
+    .glass {
+      background: var(--bg-glass);
+      border: 1px solid var(--border-glow);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: var(--radius-lg);
+    }
+
+    /* ========================
+       NAVIGATION
+    ======================== */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      height: 70px;
+      background: rgba(6,6,15,0.85);
+      border-bottom: 1px solid var(--border-glow);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      transition: var(--transition);
+    }
+    #navbar.scrolled {
+      background: rgba(6,6,15,0.97);
+      box-shadow: 0 4px 30px rgba(155,0,255,0.15);
+    }
+    .nav-inner {
+      height: 70px; display: flex; align-items: center;
+      justify-content: space-between; gap: 2rem;
+    }
+
+    /* Logo */
+    .nav-logo { display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0; }
+    .nav-logo svg { width: 40px; height: 40px; filter: drop-shadow(0 0 10px rgba(255,0,60,0.5)); }
+    .logo-text { font-family: var(--font-display); font-weight: 900; font-size: 1.05rem; letter-spacing: 1px; line-height: 1; }
+    .logo-text .shadow { color: var(--neon-red); }
+    .logo-text .mods-hub { display: block; font-size: 0.6rem; letter-spacing: 4px; color: var(--neon-purple); margin-top: 2px; }
+
+    /* Nav links */
+    .nav-links { display: flex; align-items: center; gap: 0.25rem; }
+    .nav-links a {
+      font-family: var(--font-display); font-size: 0.7rem;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 0.4rem 0.85rem; border-radius: 6px;
+      color: var(--text-mid);
+      transition: var(--transition);
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--text-bright); background: rgba(155,0,255,0.12); }
+    .nav-links a.active { color: var(--neon-purple); }
+
+    /* Nav right */
+    .nav-right { display: flex; align-items: center; gap: 0.75rem; }
+    .nav-search-mini {
+      display: flex; align-items: center;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(155,0,255,0.2);
+      border-radius: 8px; overflow: hidden;
+      transition: var(--transition);
+    }
+    .nav-search-mini:focus-within { border-color: var(--neon-purple); box-shadow: 0 0 12px rgba(155,0,255,0.2); }
+    .nav-search-mini input {
+      background: none; border: none; outline: none;
+      color: var(--text-bright); font-size: 0.8rem;
+      padding: 0.4rem 0.75rem; width: 160px;
+    }
+    .nav-search-mini input::placeholder { color: var(--text-dim); }
+    .nav-search-mini button {
+      padding: 0.4rem 0.65rem; color: var(--text-mid);
+      transition: var(--transition);
+    }
+    .nav-search-mini button:hover { color: var(--neon-purple); }
+
+    /* Hamburger */
+    .hamburger { display: none; flex-direction: column; gap: 5px; padding: 6px; border-radius: 6px; transition: var(--transition); }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--text-mid); border-radius: 2px; transition: var(--transition); }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile menu */
+    .mobile-menu {
+      display: none; position: fixed; top: 70px; left: 0; right: 0;
+      background: rgba(6,6,15,0.98); border-bottom: 1px solid var(--border-glow);
+      backdrop-filter: blur(20px); z-index: 999; padding: 1.5rem;
+      flex-direction: column; gap: 0.5rem; animation: slideDown 0.3s ease;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: var(--font-display); font-size: 0.8rem; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--text-mid);
+      padding: 0.75rem 1rem; border-radius: 8px; transition: var(--transition);
+      border: 1px solid transparent;
+    }
+    .mobile-menu a:hover { color: var(--text-bright); background: rgba(155,0,255,0.1); border-color: var(--border-glow); }
+    .mobile-search { display: flex; margin-top: 0.5rem; }
+    .mobile-search input {
+      flex: 1; background: rgba(255,255,255,0.05); border: 1px solid var(--border-glow);
+      border-right: none; border-radius: 8px 0 0 8px; outline: none;
+      color: var(--text-bright); font-size: 0.85rem; padding: 0.6rem 1rem;
+    }
+    .mobile-search button {
+      background: linear-gradient(135deg, var(--neon-red), var(--neon-purple));
+      border-radius: 0 8px 8px 0; padding: 0.6rem 1rem; color: #fff; font-size: 1rem;
+    }
+
+    @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ========================
+       HERO
+    ======================== */
+    #hero {
+      min-height: 100vh; display: flex; align-items: center;
+      position: relative; overflow: hidden; padding-top: 70px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 40%, rgba(155,0,255,0.18) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 20% 70%, rgba(255,0,60,0.14) 0%, transparent 55%),
+        radial-gradient(ellipse 40% 40% at 50% 10%, rgba(0,212,255,0.08) 0%, transparent 50%),
+        linear-gradient(180deg, var(--bg-deep) 0%, #0d0d22 100%);
+    }
+    /* Animated orbs */
+    .hero-orb {
+      position: absolute; border-radius: 50%; filter: blur(80px);
+      animation: float 8s ease-in-out infinite;
+    }
+    .hero-orb-1 { width: 500px; height: 500px; background: rgba(155,0,255,0.12); top: -100px; right: -100px; animation-delay: 0s; }
+    .hero-orb-2 { width: 350px; height: 350px; background: rgba(255,0,60,0.1); bottom: 50px; left: -80px; animation-delay: -3s; }
+    .hero-orb-3 { width: 250px; height: 250px; background: rgba(0,212,255,0.08); top: 40%; left: 40%; animation-delay: -5s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-30px) scale(1.05); }
+    }
+    .hero-content { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; padding: 4rem 0; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      font-family: var(--font-display); font-size: 0.65rem; letter-spacing: 4px;
+      text-transform: uppercase; color: var(--neon-purple);
+      background: rgba(155,0,255,0.1); border: 1px solid rgba(155,0,255,0.3);
+      padding: 0.35rem 1rem; border-radius: 50px; margin-bottom: 1.5rem;
+      animation: fadeInUp 0.6s ease both;
+    }
+    .hero-eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--neon-purple); border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .hero-title {
+      font-family: var(--font-display); font-weight: 900;
+      font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.05;
+      letter-spacing: -1px; margin-bottom: 1.5rem;
+      animation: fadeInUp 0.6s ease 0.1s both;
+    }
+    .hero-title .highlight {
+      background: linear-gradient(135deg, var(--neon-red), var(--neon-purple), var(--neon-blue));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-desc {
+      font-family: var(--font-text); font-size: 1.05rem; color: var(--text-mid);
+      max-width: 480px; margin-bottom: 2.5rem; line-height: 1.8;
+      animation: fadeInUp 0.6s ease 0.2s both;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeInUp 0.6s ease 0.3s both; }
+    .hero-stats { display: flex; gap: 2rem; margin-top: 3rem; animation: fadeInUp 0.6s ease 0.4s both; }
+    .stat-item { text-align: center; }
+    .stat-num { font-family: var(--font-display); font-size: 1.6rem; font-weight: 900; background: linear-gradient(135deg, var(--neon-red), var(--neon-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .stat-label { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-dim); }
+
+    /* Hero visual */
+    .hero-visual { position: relative; animation: fadeInRight 0.8s ease 0.2s both; }
+    .hero-game-card {
+      background: var(--bg-glass); border: 1px solid var(--border-glow);
+      backdrop-filter: blur(20px); border-radius: 20px; overflow: hidden;
+      position: relative; transform: perspective(1000px) rotateY(-8deg) rotateX(3deg);
+      transition: transform 0.6s ease;
+    }
+    .hero-game-card:hover { transform: perspective(1000px) rotateY(-3deg) rotateX(1deg); }
+    .hero-card-img {
+      width: 100%; height: 280px; object-fit: cover;
+      background: linear-gradient(135deg, #1a0030, #300010, #001a30);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 5rem; position: relative; overflow: hidden;
+    }
+    .hero-card-img::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(6,6,15,0.8) 100%);
+    }
+    .hero-card-body { padding: 1.5rem; }
+    .hero-card-tag { font-family: var(--font-display); font-size: 0.6rem; letter-spacing: 3px; color: var(--neon-red); text-transform: uppercase; margin-bottom: 0.5rem; }
+    .hero-card-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .hero-card-meta { display: flex; align-items: center; justify-content: space-between; }
+    .hero-badge { font-size: 0.65rem; padding: 3px 10px; border-radius: 50px; background: linear-gradient(135deg, var(--neon-red), var(--neon-purple)); letter-spacing: 1px; }
+    .hero-card-float {
+      position: absolute; background: var(--bg-glass); border: 1px solid var(--border-glow);
+      backdrop-filter: blur(12px); border-radius: 12px; padding: 0.75rem 1rem;
+      display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; white-space: nowrap;
+    }
+    .hero-card-float.top-left { top: -20px; left: -30px; animation: floatBadge 3s ease-in-out infinite; }
+    .hero-card-float.bottom-right { bottom: -20px; right: -25px; animation: floatBadge 3s ease-in-out infinite 1.5s; }
+    @keyframes floatBadge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .float-icon { font-size: 1.2rem; }
+    .float-label { font-family: var(--font-display); font-size: 0.6rem; color: var(--text-dim); display: block; letter-spacing: 1px; }
+    .float-value { font-weight: 700; color: var(--neon-blue); }
+
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
+
+    /* ========================
+       SEARCH BAR
+    ======================== */
+    #search-section { padding: 3rem 0; }
+    .search-wrapper {
+      max-width: 700px; margin: 0 auto;
+      display: flex; align-items: stretch;
+      background: var(--bg-glass); border: 1px solid var(--border-glow);
+      backdrop-filter: blur(20px); border-radius: 14px; overflow: hidden;
+      box-shadow: 0 8px 40px rgba(155,0,255,0.1);
+      transition: var(--transition);
+    }
+    .search-wrapper:focus-within { border-color: var(--neon-purple); box-shadow: 0 8px 40px rgba(155,0,255,0.25); }
+    .search-icon { display: flex; align-items: center; padding: 0 1.25rem; color: var(--text-dim); font-size: 1.1rem; }
+    .search-wrapper input {
+      flex: 1; background: none; border: none; outline: none;
+      color: var(--text-bright); font-family: var(--font-body);
+      font-size: 1rem; padding: 1.1rem 0;
+    }
+    .search-wrapper input::placeholder { color: var(--text-dim); }
+    .search-btn {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-family: var(--font-display); font-size: 0.7rem; letter-spacing: 2px;
+      text-transform: uppercase; padding: 0 1.75rem;
+      background: linear-gradient(135deg, var(--neon-red), var(--neon-purple));
+      color: #fff; font-weight: 700; transition: var(--transition);
+    }
+    .search-btn:hover { opacity: 0.9; }
+    .search-tags { display: flex; gap: 0.5rem; margin-top: 1rem; justify-content: center; flex-wrap: wrap; }
+    .search-tag {
+      font-size: 0.7rem; letter-spacing: 1px; padding: 0.3rem 0.8rem;
+      border-radius: 50px; background: rgba(155,0,255,0.08);
+      border: 1px solid rgba(155,0,255,0.2); color: var(--text-mid);
+      transition: var(--transition); cursor: pointer;
+    }
+    .search-tag:hover { background: rgba(155,0,255,0.18); color: var(--text-bright); border-color: var(--neon-purple); }
+
+    /* ========================
+       CATEGORIES
+    ======================== */
+    #categories { padding: 5rem 0; }
+    .categories-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1.25rem; }
+    .category-card {
+      background: var(--bg-glass); border: 1px solid var(--border-glow);
+      backdrop-filter: blur(12px); border-radius: var(--radius);
+      padding: 1.75rem 1.25rem; text-align: center; cursor: pointer;
+      transition: var(--transition); position: relative; overflow: hidden;
+    }
+    .category-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, var(--c1), var(--c2));
+      opacity: 0; transition: var(--transition);
+    }
+    .category-card:hover::before { opacity: 0.08; }
+    .category-card:hover { transform: translateY(-5px); border-color: var(--c1); box-shadow: 0 12px 40px rgba(0,0,0,0.3), 0 0 20px rgba(var(--c1-rgb),0.15); }
+    .cat-icon { font-size: 2.2rem; margin-bottom: 0.75rem; position: relative; z-index: 1; }
+    .cat-name { font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 0.3rem; position: relative; z-index: 1; }
+    .cat-count { font-size: 0.7rem; color: var(--text-dim); position: relative; z-index: 1; letter-spacing: 1px; }
+    .cat-bar { height: 3px; border-radius: 2px; margin-top: 1rem; position: relative; z-index: 1; background: linear-gradient(90deg, var(--c1), var(--c2)); transform: scaleX(0.4); transform-origin: left; transition: var(--transition); }
+    .category-card:hover .cat-bar { transform: scaleX(1); }
+
+    /* ========================
+       TRENDING SLIDER
+    ======================== */
+    #trending { padding: 5rem 0; }
+    .slider-wrapper { position: relative; overflow: hidden; }
+    .slider-track {
+      display: flex; gap: 1.25rem;
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .mod-card {
+      flex-shrink: 0; width: 300px;
+      background: var(--bg-glass); border: 1px solid var(--border-glow);
+      backdrop-filter: blur(12px); border-radius: var(--radius-lg);
+      overflow: hidden; transition: var(--transition); cursor: pointer;
+      position: relative;
+    }
+    .mod-card:hover { transform: translateY(-6px); border-color: rgba(155,0,255,0.55); box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 30px rgba(155,0,255,0.15); }
+    .mod-thumb {
+      height: 180px; background: linear-gradient(135deg, #1a0030, #300010);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3.5rem; position: relative; overflow: hidden;
+    }
+    .mod-thumb::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(6,6,15,0.7) 100%); }
+    .mod-thumb-overlay {
+      position: absolute; top: 0.75rem; left: 0.75rem;
+      background: linear-gradient(135deg, var(--neon-red), var(--neon-purple));
+      font-family: var(--font-display); font-size: 0.55rem; letter-spacing: 2px;
+      padding: 3px 9px; border-radius: 50px; text-transform: uppercase; z-index: 1;
+    }
+    .mod-card-body { padding: 1.25rem; }
+    .mod-game-tag { font-family: var(--font-display); font-size: 0.6rem; letter-spacing: 3px; text-transform: uppercase; color: var(--neon-purple); margin-bottom: 0.4rem; }
+    .mod-title { font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-bright); line-height: 1.3; }
+    .mod-desc { font-size: 0.8rem; color: var(--text-mid); line-height: 1.6; margin-bottom: 1rem; }
+    .mod-footer { display: flex; align-items: center; justify-content: space-between; }
+    .mod-meta { display: flex; gap: 1rem; font-size: 0.72rem; color: var(--text-dim); }
+    .mod-meta span { display: flex; align-items: center; gap: 0.3rem; }
+    .slider-nav { display: flex; gap: 0.75rem; margin-top: 2rem; justify-content: center; align-items: center; }
+    .slider-arrow {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--bg-glass); border: 1px solid var(--border-glow);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-mid); font-size: 1.1rem; transition: var(--transition); cursor: pointer;
+    }
+    .slider-arrow:hover { background: rgba(155,0,255,0.12); border-color: var(--neon-purple); color: var(--neon-purple); }
+    .slider-dots { display: flex; gap: 6px; align-items: center; }
+    .slider-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--text-dim); transition: var(--transition); cursor: pointer; }
+    .slider-dot.active { background: var(--neon-purple); width: 24px; border-radius: 4px; }
+
+    /* ========================
+       MOD GRID (FEATURED)
+    ======================== */
+    #featured { padding: 5rem 0; }
+    .mods-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+
+    /* ========================
+       GAME SECTIONS
+    ======================== */
+    #game-sections { padding: 5rem 0; }
+    .game-tabs { display: flex; gap: 0.5rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--border-glow); padding-bottom: 1rem; }
+    .game-tab {
+      font-family: var(--font-display); font-size: 0.72rem; letter-spacing: 2px;
+      text-transform: uppercase; padding: 0.55rem 1.25rem; border-radius: 8px;
+      color: var(--text-mid); transition: var(--transition); cursor: pointer;
+      border: 1px solid transparent;
+    }
+    .game-tab.active { color: var(--text-bright); background: rgba(155,0,255,0.12); border-color: var(--border-glow); }
+    .game-tab:hover { color: var(--text-bright); background: rgba(155,0,255,0.08); }
+    .tab-pane { display: none; }
+    .tab-pane.active { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+
+    /* ========================
+       BANNER
+    ======================== */
+    .promo-banner {
+      margin: 0; padding: 5rem 0;
+      background: none;
+    }
+    .promo-inner {
+      background: linear-gradient(135deg, rgba(155,0,255,0.12) 0%, rgba(255,0,60,0.08) 50%, rgba(0,212,255,0.07) 100%);
+      border: 1px solid var(--border-glow); border-radius: 24px;
+      padding: 4rem 3rem; position: relative; overflow: hidden;
+      display: flex; align-items: center; gap: 3rem; flex-wrap: wrap;
+    }
+    .promo-inner::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 50% 100% at 80% 50%, rgba(155,0,255,0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .promo-text { flex: 1; min-width: 260px; }
+    .promo-eyebrow { font-family: var(--font-display); font-size: 0.65rem; letter-spacing: 4px; color: var(--neon-purple); text-transform: uppercase; margin-bottom: 1rem; }
+    .promo-title { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 900; margin-bottom: 1rem; }
+    .promo-title span { background: linear-gradient(135deg, var(--neon-red), var(--neon-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .promo-desc { color: var(--text-mid); font-family: var(--font-text); line-height: 1.7; max-width: 440px; }
+    .promo-actions { display: flex; gap: 1rem; margin-top: 1.75rem; flex-wrap: wrap; }
+    .promo-deco { position: absolute; right: 3rem; top: 50%; transform: translateY(-50%); font-size: 8rem; opacity: 0.06; pointer-events: none; }
+
+    /* ========================
+       FOOTER
+    ======================== */
+    footer {
+      background: rgba(6,6,15,0.95); border-top: 1px solid var(--border-glow);
+      padding: 4rem 0 2rem; margin-top: 2rem;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand .nav-logo { margin-bottom: 1rem; }
+    .footer-desc { font-family: var(--font-text); font-size: 0.88rem; color: var(--text-mid); line-height: 1.7; max-width: 260px; }
+    .footer-social { display: flex; gap: 0.75rem; margin-top: 1.5rem; }
+    .social-btn {
+      width: 38px; height: 38px; border-radius: 8px;
+      background: rgba(155,0,255,0.08); border: 1px solid var(--border-glow);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-mid); font-size: 0.9rem; transition: var(--transition);
+    }
+    .social-btn:hover { background: rgba(155,0,255,0.2); color: var(--neon-purple); border-color: var(--neon-purple); transform: translateY(-2px); }
+    .footer-col h4 { font-family: var(--font-display); font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; color: var(--neon-purple); margin-bottom: 1.25rem; }
+    .footer-col ul li { margin-bottom: 0.6rem; }
+    .footer-col ul a { font-size: 0.88rem; color: var(--text-mid); transition: var(--transition); }
+    .footer-col ul a:hover { color: var(--text-bright); padding-left: 4px; }
+    .footer-bottom { border-top: 1px solid var(--border-glow); padding-top: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: 0.8rem; color: var(--text-dim); }
+    .footer-bottom a { color: var(--neon-purple); }
+    .footer-badges { display: flex; gap: 0.5rem; }
+    .footer-badge {
+      font-family: var(--font-display); font-size: 0.55rem; letter-spacing: 2px;
+      padding: 3px 8px; border-radius: 4px; border: 1px solid var(--border-glow);
+      color: var(--text-dim); text-transform: uppercase;
+    }
+
+    /* ========================
+       SCROLL TO TOP
+    ======================== */
+    #scrollTop {
+      position: fixed; bottom: 2rem; right: 2rem; z-index: 900;
+      width: 46px; height: 46px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--neon-red), var(--neon-purple));
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 1.1rem; cursor: pointer;
+      opacity: 0; transform: translateY(20px); pointer-events: none;
+      transition: var(--transition); box-shadow: 0 4px 20px rgba(155,0,255,0.3);
+    }
+    #scrollTop.visible { opacity: 1; transform: translateY(0); pointer-events: all; }
+    #scrollTop:hover { box-shadow: 0 6px 30px rgba(155,0,255,0.5); transform: translateY(-2px); }
+
+    /* ========================
+       RESPONSIVE
+    ======================== */
+    @media (max-width: 1024px) {
+      .hero-content { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-visual { max-width: 480px; margin: 0 auto; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-search-mini { display: none; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-content { padding: 2rem 0; }
+      .hero-stats { gap: 1.25rem; }
+      .promo-inner { padding: 2.5rem 1.75rem; }
+      .promo-deco { display: none; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; }
+      .btn-primary, .btn-ghost { justify-content: center; }
+      .categories-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ========================
+       SECTION ANIMATIONS
+    ======================== */
+    .reveal { opacity: 0; transform: translateY(25px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.in-view { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+  </style>
+</head>
+<body>
+
+  <!-- =====================
+       NAVIGATION
+  ===================== -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <!-- Logo -->
+        <a href="#" class="nav-logo">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ff003c"/>
+                <stop offset="100%" stop-color="#9b00ff"/>
+              </linearGradient>
+              <filter id="logoGlow">
+                <feGaussianBlur stdDeviation="1.5" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="none" stroke="url(#logoGrad)" stroke-width="2" filter="url(#logoGlow)"/>
+            <polygon points="20,7 31,13.5 31,26.5 20,33 9,26.5 9,13.5" fill="rgba(155,0,255,0.12)"/>
+            <text x="20" y="25" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="13" font-weight="900" fill="url(#logoGrad)" filter="url(#logoGlow)">S</text>
+          </svg>
+          <div class="logo-text">
+            <span><span class="shadow">Shadow</span> Mods</span>
+            <span class="mods-hub">Hub</span>
+          </div>
+        </a>
+
+        <!-- Nav Links -->
+        <nav class="nav-links">
+          <a href="#" class="active">Home</a>
+          <a href="#categories">Categories</a>
+          <a href="#game-sections">GTA SA</a>
+          <a href="#game-sections">Vice City</a>
+          <a href="#trending">Trending</a>
+          <a href="#featured">Top Mods</a>
+        </nav>
+
+        <!-- Right -->
+        <div class="nav-right">
+          <div class="nav-search-mini">
+            <input type="text" placeholder="Search mods…" id="nav-search-input" />
+            <button aria-label="Search">🔍</button>
+          </div>
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#">🏠 Home</a>
+    <a href="#categories">🗂️ Categories</a>
+    <a href="#game-sections">🎮 GTA San Andreas</a>
+    <a href="#game-sections">🌴 GTA Vice City</a>
+    <a href="#trending">🔥 Trending</a>
+    <a href="#featured">⭐ Top Mods</a>
+    <div class="mobile-search">
+      <input type="text" placeholder="Search mods…" />
+      <button>🔍</button>
+    </div>
+  </div>
+
+  <!-- =====================
+       HERO
+  ===================== -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="container">
+      <div class="hero-content">
+        <!-- Left -->
+        <div>
+          <div class="hero-eyebrow">⚡ Ultimate Mod Destination</div>
+          <h1 class="hero-title">
+            Unleash the<br/>
+            <span class="highlight">Shadow World</span><br/>
+            of GTA Mods
+          </h1>
+          <p class="hero-desc">
+            Discover thousands of premium mods for GTA San Andreas &amp; Vice City.
+            From anime skins to realistic graphics — transform your game.
+          </p>
+          <div class="hero-actions">
+            <a href="#featured" class="btn-primary"><span>🔥</span><span>Explore Mods</span></a>
+            <a href="#categories" class="btn-ghost">Browse Categories</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item"><div class="stat-num">4.2K+</div><div class="stat-label">Mods</div></div>
+            <div class="stat-item"><div class="stat-num">380K+</div><div class="stat-label">Downloads</div></div>
+            <div class="stat-item"><div class="stat-num">28K+</div><div class="stat-label">Players</div></div>
+          </div>
+        </div>
+        <!-- Right -->
+        <div class="hero-visual">
+          <div class="hero-card-float top-left">
+            <span class="float-icon">🏆</span>
+            <div><span class="float-label">Mod of Month</span><span class="float-value">Anime CJ Pack</span></div>
+          </div>
+          <div class="hero-game-card">
+            <div class="hero-card-img">
+              <!-- SVG Illustration for hero card -->
+              <svg width="100%" height="100%" viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0">
+                <defs>
+                  <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a0030"/><stop offset="100%" stop-color="#300010"/></linearGradient>
+                  <radialGradient id="hg2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#9b00ff" stop-opacity="0.4"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+                  <radialGradient id="hg3" cx="70%" cy="30%" r="40%"><stop offset="0%" stop-color="#ff003c" stop-opacity="0.3"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+                </defs>
+                <rect width="400" height="280" fill="url(#hg1)"/>
+                <ellipse cx="200" cy="140" rx="180" ry="120" fill="url(#hg2)"/>
+                <ellipse cx="280" cy="80" rx="120" ry="80" fill="url(#hg3)"/>
+                <!-- City grid lines -->
+                <g opacity="0.15" stroke="#9b00ff" stroke-width="0.5">
+                  <line x1="0" y1="200" x2="400" y2="200"/><line x1="0" y1="240" x2="400" y2="240"/>
+                  <line x1="50" y1="150" x2="200" y2="200"/><line x1="350" y1="150" x2="200" y2="200"/>
+                  <line x1="100" y1="100" x2="200" y2="200"/><line x1="300" y1="100" x2="200" y2="200"/>
+                </g>
+                <!-- Buildings -->
+                <g opacity="0.6">
+                  <rect x="30" y="120" width="40" height="80" fill="#1a0030" stroke="#9b00ff" stroke-width="0.5"/>
+                  <rect x="40" y="100" width="20" height="120" fill="#1a0030" stroke="#ff003c" stroke-width="0.5"/>
+                  <rect x="320" y="110" width="50" height="90" fill="#1a0030" stroke="#9b00ff" stroke-width="0.5"/>
+                  <rect x="330" y="90" width="25" height="110" fill="#1a0030" stroke="#ff003c" stroke-width="0.5"/>
+                  <rect x="150" y="80" width="30" height="120" fill="#1a0030" stroke="#00d4ff" stroke-width="0.5"/>
+                  <rect x="220" y="70" width="35" height="130" fill="#1a0030" stroke="#9b00ff" stroke-width="0.5"/>
+                </g>
+                <!-- Windows (neon dots) -->
+                <g opacity="0.8">
+                  <circle cx="45" cy="130" r="2" fill="#ff003c"/><circle cx="55" cy="130" r="2" fill="#9b00ff"/>
+                  <circle cx="45" cy="145" r="2" fill="#00d4ff"/><circle cx="55" cy="145" r="2" fill="#ff003c"/>
+                  <circle cx="325" cy="120" r="2" fill="#9b00ff"/><circle cx="340" cy="120" r="2" fill="#ff003c"/>
+                  <circle cx="355" cy="120" r="2" fill="#00d4ff"/><circle cx="325" cy="135" r="2" fill="#ff003c"/>
+                  <circle cx="155" cy="90" r="2" fill="#9b00ff"/><circle cx="165" cy="90" r="2" fill="#ff003c"/>
+                  <circle cx="225" cy="80" r="2" fill="#00d4ff"/><circle cx="240" cy="80" r="2" fill="#9b00ff"/>
+                </g>
+                <!-- Central figure glow -->
+                <ellipse cx="200" cy="220" rx="60" ry="10" fill="#9b00ff" opacity="0.3"/>
+                <text x="200" y="175" text-anchor="middle" font-size="70" opacity="0.9">🥷</text>
+                <!-- Neon text -->
+                <text x="200" y="260" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="11" fill="#9b00ff" opacity="0.7" letter-spacing="4">SHADOW MODS HUB</text>
+              </svg>
+            </div>
+            <div class="hero-card-body">
+              <div class="hero-card-tag">⭐ Featured Release</div>
+              <div class="hero-card-title">Ultimate Anime Overhaul Pack</div>
+              <div class="hero-card-meta">
+                <span class="hero-badge">GTA San Andreas</span>
+                <a href="#" class="btn-download"><span>⬇</span><span>Download</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card-float bottom-right">
+            <span class="float-icon">⬇</span>
+            <div><span class="float-label">Downloads Today</span><span class="float-value">1,247</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       SEARCH
+  ===================== -->
+  <section id="search-section">
+    <div class="container reveal">
+      <div class="search-wrapper">
+        <div class="search-icon">🔍</div>
+        <input type="text" id="main-search" placeholder="Search for mods, skins, scripts, maps…" />
+        <button class="search-btn" onclick="doSearch()">Search</button>
+      </div>
+      <div class="search-tags">
+        <span class="search-tag" onclick="quickSearch('Anime Skin')">Anime Skin</span>
+        <span class="search-tag" onclick="quickSearch('Car Mods')">Car Mods</span>
+        <span class="search-tag" onclick="quickSearch('Graphics Pack')">Graphics Pack</span>
+        <span class="search-tag" onclick="quickSearch('Weapon Mods')">Weapon Mods</span>
+        <span class="search-tag" onclick="quickSearch('Map Mods')">Map Mods</span>
+        <span class="search-tag" onclick="quickSearch('ENB Shaders')">ENB Shaders</span>
+        <span class="search-tag" onclick="quickSearch('Script Mods')">Script Mods</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       CATEGORIES
+  ===================== -->
+  <section id="categories">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title"><span class="line"></span> Categories <span class="badge">12</span></h2>
+        <a href="#" class="view-all-btn">View All →</a>
+      </div>
+      <div class="categories-grid">
+        <div class="category-card reveal reveal-delay-1" style="--c1:#ff003c;--c2:#ff0080;--c1-rgb:255,0,60" onclick="filterCategory('Skins')">
+          <div class="cat-icon">👤</div>
+          <div class="cat-name">Skins & Peds</div>
+          <div class="cat-count">342 Mods</div>
+          <div class="cat-bar"></div>
+        </div>
+        <div class="category-card reveal reveal-delay-2" style="--c1:#9b00ff;--c2:#ff00ff;--c1-rgb:155,0,255" onclick="filterCategory('Cars')">
+          <div class="cat-icon">🚗</div>
+          <div class="cat-name">Cars & Vehicles</div>
+          <div class="cat-count">518 Mods</div>
+          <div class="cat-bar"></div>
+        </div>
+        <div class="category-card reveal reveal-delay-3" style="--c1:#00d4ff;--c2:#0080ff;--c1-rgb:0,212,255" onclick="filterCategory('Graphics')">
+          <div class="cat-icon">🌅</div>
+          <div class="cat-name">Graphics & ENB</div>
+          <div class="cat-count">195 Mods</div>
+          <div class="cat-bar"></div>
+        </div>
+        <div class="category-card reveal reveal-delay-4" style="--c1:#ffcc00;--c2:#ff8800;--c1-rgb:255,204,0" onclick="filterCategory('Weapons')">
+          <div class="cat-icon">🔫</div>
+          <div class="cat-name">Weapons</div>
+          <div class="cat-count">287 Mods</div>
+          <div class="cat-bar"></div>
+        </div>
+        <div class="category-card reveal reveal-delay-1" style="--c1:#00ff88;--c2:#00d4ff;--c1-rgb:0,255,136" onclick="filterCategory('Maps')">
+          <div class="cat-icon">🗺️</div>
+          <div class="cat-name">Maps & Areas</div>
+          <div class="cat-count">124 Mods</div>
+          <div class="cat-bar"></div>
+        </div>
+        <div class="category-card reveal reveal-delay-2" style="--c1:#ff6600;--c2:#ff003c;--c1-rgb:255,102,0" onclick="filterCategory('Scripts')">
+          <div class="cat-icon">📜</div>
+          <div class="cat-name">Scripts & Plugins</div>
+          <div class="cat-count">431 Mods</div>
+          <div class="cat-bar"></div>
+        </div>
+        <div class="category-card reveal reveal-delay-3" style="--c1:#ff00ff;--c2:#9b00ff;--c1-rgb:255,0,255" onclick="filterCategory('Anime')">
+          <div class="cat-icon">🌸</div>
+          <div class="cat-name">Anime Packs</div>
+          <div class="cat-count">167 Mods</div>
+          <div class="cat-bar"></div>
+        </div>
+        <div class="category-card reveal reveal-delay-4" style="--c1:#00ffcc;--c2:#00d4ff;--c1-rgb:0,255,204" onclick="filterCategory('Missions')">
+          <div class="cat-icon">🎯</div>
+          <div class="cat-name">Missions & Story</div>
+          <div class="cat-count">89 Mods</div>
+          <div class="cat-bar"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       TRENDING SLIDER
+  ===================== -->
+  <section id="trending">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title"><span class="line"></span> Trending Now <span class="badge">HOT</span></h2>
+        <a href="#" class="view-all-btn">View All →</a>
+      </div>
+      <div class="slider-wrapper reveal">
+        <div class="slider-track" id="sliderTrack">
+          <!-- Card 1 -->
+          <div class="mod-card">
+            <div class="mod-thumb">
+              <svg width="100%" height="100%" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0">
+                <defs><linearGradient id="t1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a0030"/><stop offset="100%" stop-color="#300010"/></linearGradient></defs>
+                <rect width="300" height="180" fill="url(#t1)"/>
+                <circle cx="150" cy="80" r="50" fill="rgba(155,0,255,0.2)" />
+                <text x="150" y="95" text-anchor="middle" font-size="50">🌸</text>
+                <rect x="0" y="140" width="300" height="40" fill="rgba(6,6,15,0.7)"/>
+              </svg>
+              <div class="mod-thumb-overlay">🔥 Hot</div>
+            </div>
+            <div class="mod-card-body">
+              <div class="mod-game-tag">GTA San Andreas</div>
+              <div class="mod-title">Anime Girl Skin Pack Vol.3</div>
+              <div class="mod-desc">25 high-quality anime character skins with custom textures and animations.</div>
+              <div class="mod-footer">
+                <div class="mod-meta">
+                  <span>⬇ 8.2K</span><span>⭐ 4.9</span>
+                </div>
+                <a href="#" class="btn-download"><span>⬇</span><span>Get</span></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="mod-card">
+            <div class="mod-thumb">
+              <svg width="100%" height="100%" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0">
+                <defs><linearGradient id="t2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#001a30"/><stop offset="100%" stop-color="#001a20"/></linearGradient></defs>
+                <rect width="300" height="180" fill="url(#t2)"/>
+                <circle cx="150" cy="80" r="50" fill="rgba(0,212,255,0.15)" />
+                <text x="150" y="95" text-anchor="middle" font-size="50">🚗</text>
+                <rect x="0" y="140" width="300" height="40" fill="rgba(6,6,15,0.7)"/>
+              </svg>
+              <div class="mod-thumb-overlay">⚡ New</div>
+            </div>
+            <div class="mod-card-body">
+              <div class="mod-game-tag">GTA Vice City</div>
+              <div class="mod-title">JDM Street Racing Pack</div>
+              <div class="mod-desc">12 authentic JDM cars with custom handling and neon underglow effects.</div>
+              <div class="mod-footer">
+                <div class="mod-meta"><span>⬇ 6.5K</span><span>⭐ 4.8</span></div>
+                <a href="#" class="btn-download"><span>⬇</span><span>Get</span></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="mod-card">
+            <div class="mod-thumb">
+              <svg width="100%" height="100%" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0">
+                <defs><linearGradient id="t3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#200010"/><stop offset="100%" stop-color="#100020"/></linearGradient></defs>
+                <rect width="300" height="180" fill="url(#t3)"/>
+                <circle cx="150" cy="80" r="50" fill="rgba(255,0,60,0.15)" />
+                <text x="150" y="95" text-anchor="middle" font-size="50">🌆</text>
+                <rect x="0" y="140" width="300" height="40" fill="rgba(6,6,15,0.7)"/>
+              </svg>
+              <div class="mod-thumb-overlay">🎨 Visual</div>
+            </div>
+            <div class="mod-card-body">
+              <div class="mod-game-tag">GTA San Andreas</div>
+              <div class="mod-title">CyberpunkCity ENB Shader</div>
+              <div class="mod-desc">Transform Los Santos into a cyberpunk metropolis with neon lights and rain.</div>
+              <div class="mod-footer">
+                <div class="mod-meta"><span>⬇ 12K</span><span>⭐ 5.0</span></div>
+                <a href="#" class="btn-download"><span>⬇</span><span>Get</span></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="mod-card">
+            <div class="mod-thumb">
+              <svg width="100%" height="100%" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0">
+                <defs><linearGradient id="t4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#100030"/><stop offset="100%" stop-color="#001020"/></linearGradient></defs>
+                <rect width="300" height="180" fill="url(#t4)"/>
+                <circle cx="150" cy="80" r="50" fill="rgba(155,0,255,0.15)" />
+                <text x="150" y="95" text-anchor="middle" font-size="50">🔫</text>
+                <rect x="0" y="140" width="300" height="40" fill="rgba(6,6,15,0.7)"/>
+              </svg>
+              <div class="mod-thumb-overlay">💥 Epic</div>
+            </div>
+            <div class="mod-card-body">
+              <div class="mod-game-tag">GTA Vice City</div>
+              <div class="mod-title">Military Arsenal Pack</div>
+              <div class="mod-desc">30 ultra-realistic military weapons with custom sounds and reload animations.</div>
+              <div class="mod-footer">
+                <div class="mod-meta"><span>⬇ 9.1K</span><span>⭐ 4.7</span></div>
+                <a href="#" class="btn-download"><span>⬇</span><span>Get</span></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="mod-card">
+            <div class="mod-thumb">
+              <svg width="100%" height="100%" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0">
+                <defs><linearGradient id="t5" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#001520"/><stop offset="100%" stop-color="#150030"/></linearGradient></defs>
+                <rect width="300" height="180" fill="url(#t5)"/>
+                <circle cx="150" cy="80" r="50" fill="rgba(0,212,255,0.15)" />
+                <text x="150" y="95" text-anchor="middle" font-size="50">🗺️</text>
+                <rect x="0" y="140" width="300" height="40" fill="rgba(6,6,15,0.7)"/>
+              </svg>
+              <div class="mod-thumb-overlay">🌍 Map</div>
+            </div>
+            <div class="mod-card-body">
+              <div class="mod-game-tag">GTA San Andreas</div>
+              <div class="mod-title">Tokyo Downtown Map</div>
+              <div class="mod-desc">Explore a fully detailed recreation of Tokyo with shops, alleyways and neon signs.</div>
+              <div class="mod-footer">
+                <div class="mod-meta"><span>⬇ 5.3K</span><span>⭐ 4.6</span></div>
+                <a href="#" class="btn-download"><span>⬇</span><span>Get</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-nav">
+        <button class="slider-arrow" id="prevSlide" aria-label="Previous">◀</button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <button class="slider-arrow" id="nextSlide" aria-label="Next">▶</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       FEATURED MODS GRID
+  ===================== -->
+  <section id="featured">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title"><span class="line"></span> Top Rated Mods</h2>
+        <a href="#" class="view-all-btn">View All →</a>
+      </div>
+      <div class="mods-grid" id="modsGrid">
+        <!-- Cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       GAME SECTIONS (TABS)
+  ===================== -->
+  <section id="game-sections" style="padding: 5rem 0;">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title"><span class="line"></span> Browse By Game</h2>
+      </div>
+      <div class="game-tabs reveal">
+        <button class="game-tab active" onclick="switchTab('sa', this)">🎮 GTA San Andreas</button>
+        <button class="game-tab" onclick="switchTab('vc', this)">🌴 GTA Vice City</button>
+      </div>
+      <div class="tab-pane active" id="tab-sa"></div>
+      <div class="tab-pane" id="tab-vc"></div>
+    </div>
+  </section>
+
+  <!-- =====================
+       PROMO BANNER
+  ===================== -->
+  <section class="promo-banner">
+    <div class="container">
+      <div class="promo-inner reveal">
+        <div class="promo-deco">🥷</div>
+        <div class="promo-text">
+          <div class="promo-eyebrow">✨ Shadow Mods Hub Special</div>
+          <h2 class="promo-title">All Mods Are <span>100% Free</span><br/>No Registration Needed</h2>
+          <p class="promo-desc">We believe every GTA fan deserves access to the best mods without barriers. Browse, download, and mod freely — forever.</p>
+          <div class="promo-actions">
+            <a href="#featured" class="btn-primary"><span>🔥</span><span>Start Downloading</span></a>
+            <a href="#categories" class="btn-ghost">Browse Categories</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       FOOTER
+  ===================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px">
+              <defs>
+                <linearGradient id="fg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#ff003c"/>
+                  <stop offset="100%" stop-color="#9b00ff"/>
+                </linearGradient>
+              </defs>
+              <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="none" stroke="url(#fg)" stroke-width="2"/>
+              <polygon points="20,7 31,13.5 31,26.5 20,33 9,26.5 9,13.5" fill="rgba(155,0,255,0.12)"/>
+              <text x="20" y="25" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="13" font-weight="900" fill="url(#fg)">S</text>
+            </svg>
+            <div class="logo-text">
+              <span><span class="shadow">Shadow</span> Mods</span>
+              <span class="mods-hub">Hub</span>
+            </div>
+          </a>
+          <p class="footer-desc">Your ultimate destination for GTA San Andreas and GTA Vice City mods. Free downloads, anime packs, car mods, graphics and more.</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn" aria-label="Discord">💬</a>
+            <a href="#" class="social-btn" aria-label="YouTube">▶️</a>
+            <a href="#" class="social-btn" aria-label="Telegram">✈️</a>
+            <a href="#" class="social-btn" aria-label="Reddit">🔴</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>GTA SA Mods</h4>
+          <ul>
+            <li><a href="#">Anime Skins</a></li>
+            <li><a href="#">Car Mods</a></li>
+            <li><a href="#">Graphics Mods</a></li>
+            <li><a href="#">Weapon Packs</a></li>
+            <li><a href="#">Script Mods</a></li>
+            <li><a href="#">Map Addons</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Vice City Mods</h4>
+          <ul>
+            <li><a href="#">Character Skins</a></li>
+            <li><a href="#">80s Car Pack</a></li>
+            <li><a href="#">ENB Shaders</a></li>
+            <li><a href="#">Music Mods</a></li>
+            <li><a href="#">Mission Mods</a></li>
+            <li><a href="#">HD Textures</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">How to Install</a></li>
+            <li><a href="#">Submit a Mod</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 <a href="#">Shadow Mods Hub</a>. Fan-made site. Not affiliated with Rockstar Games.</p>
+        <div class="footer-badges">
+          <span class="footer-badge">GTA SA</span>
+          <span class="footer-badge">Vice City</span>
+          <span class="footer-badge">Free Mods</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button id="scrollTop" aria-label="Back to top" onclick="scrollToTop()">↑</button>
+
+  <!-- =====================
+       JAVASCRIPT
+  ===================== -->
+  <script>
+  // ── Navbar scroll ──
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+    document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
+  });
+
+  function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+  // ── Hamburger ──
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    hamburger.classList.remove('open'); mobileMenu.classList.remove('open');
+  }));
+
+  // ── Search ──
+  function doSearch() {
+    const q = document.getElementById('main-search').value.trim();
+    if (q) alert('Searching for: ' + q + '\n\n(Connect to your mod database to enable live search)');
+  }
+  function quickSearch(term) {
+    document.getElementById('main-search').value = term; doSearch();
+  }
+  document.getElementById('main-search').addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+
+  // ── Mod Data ──
+  const MODS = [
+    { id:1, title:'Naruto Run Animation', game:'GTA SA', cat:'Skins', icon:'🍃', dl:'14.2K', rating:'4.9', tag:'Anime', color:'#ff003c' },
+    { id:2, title:'Ferrari F40 Custom', game:'Vice City', cat:'Cars', icon:'🏎️', dl:'9.8K', rating:'4.8', tag:'Cars', color:'#9b00ff' },
+    { id:3, title:'Realistic Rain ENB', game:'GTA SA', cat:'Graphics', icon:'🌧️', dl:'18K', rating:'5.0', tag:'Visual', color:'#00d4ff' },
+    { id:4, title:'Katana Sword Pack', game:'Vice City', cat:'Weapons', icon:'⚔️', dl:'7.3K', rating:'4.7', tag:'Weapon', color:'#ffcc00' },
+    { id:5, title:'Sakura City Map', game:'GTA SA', cat:'Maps', icon:'🌸', dl:'5.6K', rating:'4.6', tag:'Map', color:'#ff00ff' },
+    { id:6, title:'Dragon Ball Z Pack', game:'GTA SA', cat:'Anime', icon:'🐉', dl:'22K', rating:'5.0', tag:'Anime', color:'#ff6600' },
+    { id:7, title:'Neon Vice ENB 2.0', game:'Vice City', cat:'Graphics', icon:'🌃', dl:'11K', rating:'4.9', tag:'Visual', color:'#00ffcc' },
+    { id:8, title:'Military Truck HD', game:'GTA SA', cat:'Cars', icon:'🚛', dl:'4.1K', rating:'4.5', tag:'Cars', color:'#00d4ff' },
+  ];
+
+  function buildModCard(m, delay) {
+    return `
+      <div class="mod-card reveal reveal-delay-${delay}" style="flex-shrink:0;width:auto" data-cat="${m.cat}" data-game="${m.game}">
+        <div class="mod-thumb">
+          <svg width="100%" height="100%" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0">
+            <defs><linearGradient id="mg${m.id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a0030"/><stop offset="100%" stop-color="#100020"/></linearGradient></defs>
+            <rect width="300" height="180" fill="url(#mg${m.id})"/>
+            <circle cx="150" cy="80" r="55" fill="${m.color}22"/>
+            <text x="150" y="100" text-anchor="middle" font-size="55">${m.icon}</text>
+            <rect x="0" y="140" width="300" height="40" fill="rgba(6,6,15,0.7)"/>
+          </svg>
+          <div class="mod-thumb-overlay">${m.tag}</div>
+        </div>
+        <div class="mod-card-body">
+          <div class="mod-game-tag">${m.game}</div>
+          <div class="mod-title">${m.title}</div>
+          <div class="mod-footer">
+            <div class="mod-meta"><span>⬇ ${m.dl}</span><span>⭐ ${m.rating}</span></div>
+            <a href="#" class="btn-download"><span>⬇</span><span>Get</span></a>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  // ── Populate grids ──
+  document.getElementById('modsGrid').innerHTML = MODS.map((m,i) => buildModCard(m,(i%5)+1)).join('');
+  const saMods = MODS.filter(m => m.game === 'GTA SA');
+  const vcMods = MODS.filter(m => m.game === 'Vice City');
+  document.getElementById('tab-sa').innerHTML = saMods.map((m,i) => buildModCard(m,(i%5)+1)).join('');
+  document.getElementById('tab-vc').innerHTML = vcMods.map((m,i) => buildModCard(m,(i%5)+1)).join('');
+
+  // ── Game Tabs ──
+  function switchTab(id, btn) {
+    document.querySelectorAll('.game-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + id).classList.add('active');
+  }
+
+  // ── Category filter ──
+  function filterCategory(cat) {
+    document.getElementById('featured').scrollIntoView({ behavior: 'smooth' });
+    const cards = document.querySelectorAll('#modsGrid .mod-card');
+    cards.forEach(c => {
+      c.style.opacity = (c.dataset.cat === cat || cat === 'All') ? '1' : '0.3';
+    });
+  }
+
+  // ── Slider ──
+  const track = document.getElementById('sliderTrack');
+  const cards = track.querySelectorAll('.mod-card');
+  const dotsContainer = document.getElementById('sliderDots');
+  let current = 0;
+  const cardWidth = 300 + 20; // width + gap
+  const visible = () => Math.max(1, Math.floor(track.parentElement.offsetWidth / cardWidth));
+  const maxIndex = () => Math.max(0, cards.length - visible());
+
+  function buildDots() {
+    dotsContainer.innerHTML = '';
+    const count = maxIndex() + 1;
+    for (let i = 0; i < count; i++) {
+      const d = document.createElement('div');
+      d.className = 'slider-dot' + (i === current ? ' active' : '');
+      d.onclick = () => goTo(i);
+      dotsContainer.appendChild(d);
+    }
+  }
+  function goTo(idx) {
+    current = Math.max(0, Math.min(idx, maxIndex()));
+    track.style.transform = `translateX(-${current * cardWidth}px)`;
+    dotsContainer.querySelectorAll('.slider-dot').forEach((d,i) => d.classList.toggle('active', i === current));
+  }
+  document.getElementById('prevSlide').onclick = () => goTo(current - 1);
+  document.getElementById('nextSlide').onclick = () => goTo(current + 1);
+  buildDots();
+  window.addEventListener('resize', () => { buildDots(); goTo(current); });
+  // Auto-slide
+  setInterval(() => goTo(current >= maxIndex() ? 0 : current + 1), 4000);
+
+  // ── Intersection Observer (reveal) ──
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // ── Smooth active nav link ──
+  const sections = document.querySelectorAll('section[id]');
+  const navAs = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+    navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current || (current === '' && a.getAttribute('href') === '#')));
+  });
+  </script>
+</body>
+</html>
