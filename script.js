@@ -27,14 +27,12 @@ const MODS = [
     game: "GTA SA",
     category: "Anime",
     tag: "⭐ Top Rated",
-    image: "https://placehold.co/400x220/100030/9b00ff?text=Goku+Pack&font=orbitron",
-    description:
-      "Play as Goku in his Super Saiyan form. Includes custom aura particle effect script, orange gi skin, and kamehameha sound.",
-    downloadUrl: "https://www.gtainside.com/",
+    image: "https://www.gtainside.com/downloads/picr/2026-05/thb_1778609670_preview.jpg",
+    description:"Fight powerfully like GTA 5. This mod is from Silk Team's source material.Full transformations, Full skills, full power, ally Ai, enemy AI.Please see installation and control instructions in the mod file after you download it.",    downloadUrl: "https://www.gtainside.com/",
     downloads: "19.1K",
     rating: 4.9,
     version: "v1.4",
-    size: "24 MB",
+    size: "	53.438 MB",
   },
   {
     title: "Demon Slayer Tanjiro Skin",
