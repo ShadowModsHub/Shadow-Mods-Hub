@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Privacy Policy – Shadow Mods Hub | GTA SA & Vice City Mods</title>
+  <meta name="description" content="Privacy Policy for Shadow Mods Hub. Learn how we collect, use and protect your data on our GTA San Andreas and Vice City mod website."/>
+  <meta name="keywords" content="Shadow Mods Hub privacy policy, GTA mods privacy, cookies policy"/>
+  <meta name="author" content="Shadow Mods Hub"/>
+  <meta property="og:title" content="Privacy Policy – Shadow Mods Hub"/>
+  <meta property="og:description" content="How Shadow Mods Hub collects and uses data. AdSense-compliant privacy policy."/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="canonical" href="https://shadowmodshub.com/privacy.html"/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff003c'/%3E%3Cstop offset='1' stop-color='%237f00ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='12' fill='%230a0a0f'/%3E%3Cpolygon points='32,8 52,22 52,42 32,56 12,42 12,22' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-size='18' font-weight='900' fill='url(%23g)' font-family='Arial'%3ES%3C/text%3E%3C/svg%3E"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --bg-deep:#06060f;--bg-dark:#0a0a18;--bg-glass:rgba(15,15,35,0.75);
+      --neon-red:#ff003c;--neon-purple:#9b00ff;--neon-blue:#00d4ff;
+      --text-bright:#f0f0ff;--text-mid:#a0a0c0;--text-dim:#55556a;
+      --border-glow:rgba(155,0,255,0.35);
+      --fd:'Orbitron',sans-serif;--fb:'Rajdhani',sans-serif;--ft:'Exo 2',sans-serif;
+      --tr:0.3s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg-deep);color:var(--text-bright);font-family:var(--fb);overflow-x:hidden;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    ul{list-style:none}
+    button{cursor:pointer;border:none;background:none;font-family:inherit}
+    ::-webkit-scrollbar{width:5px}
+    ::-webkit-scrollbar-track{background:var(--bg-deep)}
+    ::-webkit-scrollbar-thumb{background:var(--neon-purple);border-radius:3px}
+    body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(155,0,255,0.04)1px,transparent 1px),linear-gradient(90deg,rgba(155,0,255,0.04)1px,transparent 1px);background-size:60px 60px}
+    .container{max-width:1200px;margin:0 auto;padding:0 1.5rem;position:relative;z-index:1}
+
+    /* NAV */
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:68px;background:rgba(6,6,15,0.88);border-bottom:1px solid var(--border-glow);backdrop-filter:blur(24px);transition:var(--tr)}
+    #navbar.scrolled{background:rgba(6,6,15,0.98);box-shadow:0 4px 30px rgba(155,0,255,0.12)}
+    .nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+    .nav-logo{display:flex;align-items:center;gap:0.6rem;flex-shrink:0}
+    .nav-logo svg{width:36px;height:36px;filter:drop-shadow(0 0 8px rgba(255,0,60,0.5))}
+    .logo-text{font-family:var(--fd);font-weight:900;font-size:1rem;line-height:1}
+    .logo-text .red{color:var(--neon-red)}
+    .logo-text small{display:block;font-size:0.55rem;letter-spacing:4px;color:var(--neon-purple);margin-top:2px}
+    .nav-links{display:flex;align-items:center;gap:0.2rem}
+    .nav-links a{font-family:var(--fd);font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;padding:0.4rem 0.8rem;border-radius:6px;color:var(--text-mid);transition:var(--tr)}
+    .nav-links a:hover,.nav-links a.active{color:var(--text-bright);background:rgba(155,0,255,0.1)}
+    .nav-links a.active{color:var(--neon-purple)}
+    .nav-back{font-family:var(--fd);font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;padding:0.42rem 1rem;border-radius:7px;background:linear-gradient(135deg,var(--neon-red),var(--neon-purple));color:#fff;transition:var(--tr);flex-shrink:0}
+    .nav-back:hover{opacity:0.88;transform:translateY(-1px)}
+    .hamburger{display:none;flex-direction:column;gap:5px;padding:6px}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--text-mid);border-radius:2px;transition:var(--tr)}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(6,6,15,0.98);border-bottom:1px solid var(--border-glow);backdrop-filter:blur(20px);z-index:999;padding:1.25rem;flex-direction:column;gap:0.4rem}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{font-family:var(--fd);font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--text-mid);padding:0.7rem 1rem;border-radius:8px;transition:var(--tr)}
+    .mobile-menu a:hover{color:var(--text-bright);background:rgba(155,0,255,0.1)}
+
+    /* PAGE HERO */
+    .page-hero{min-height:34vh;display:flex;align-items:center;justify-content:center;padding-top:68px;position:relative;overflow:hidden;text-align:center}
+    .page-hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 60% 80% at 50% 60%,rgba(155,0,255,0.14) 0%,transparent 65%),linear-gradient(180deg,var(--bg-deep) 0%,#0d0d22 100%)}
+    .page-hero-orb{position:absolute;border-radius:50%;filter:blur(80px);animation:floatOrb 8s ease-in-out infinite}
+    .orb-a{width:340px;height:340px;background:rgba(155,0,255,0.09);top:-60px;right:-60px}
+    .orb-b{width:240px;height:240px;background:rgba(0,212,255,0.06);bottom:0;left:-50px;animation-delay:-4s}
+    @keyframes floatOrb{0%,100%{transform:translateY(0)}50%{transform:translateY(-22px)}}
+    .page-hero-content{position:relative;z-index:1;padding:2.5rem 0}
+    .page-eyebrow{display:inline-flex;align-items:center;gap:0.6rem;font-family:var(--fd);font-size:0.6rem;letter-spacing:4px;text-transform:uppercase;color:var(--neon-purple);background:rgba(155,0,255,0.1);border:1px solid rgba(155,0,255,0.3);padding:0.3rem 1rem;border-radius:50px;margin-bottom:1.2rem}
+    .page-eyebrow::before{content:'';width:6px;height:6px;background:var(--neon-purple);border-radius:50%;animation:blink 2s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
+    .page-title{font-family:var(--fd);font-weight:900;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-0.5px;margin-bottom:1rem}
+    .page-title .hl{background:linear-gradient(135deg,var(--neon-red),var(--neon-purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .page-subtitle{font-family:var(--ft);font-size:0.92rem;color:var(--text-mid);max-width:500px;margin:0 auto;line-height:1.8}
+
+    /* BREADCRUMB */
+    .breadcrumb{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-family:var(--fd);font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim)}
+    .breadcrumb a{color:var(--neon-purple);transition:var(--tr)}
+    .breadcrumb a:hover{color:var(--text-bright)}
+
+    /* PRIVACY LAYOUT */
+    .privacy-layout{display:grid;grid-template-columns:240px 1fr;gap:3rem;padding:4rem 0 5rem;align-items:start}
+
+    /* TOC SIDEBAR */
+    .toc{background:var(--bg-glass);border:1px solid var(--border-glow);backdrop-filter:blur(12px);border-radius:16px;padding:1.5rem;position:sticky;top:88px}
+    .toc-title{font-family:var(--fd);font-size:0.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--neon-purple);margin-bottom:1rem}
+    .toc ul{display:flex;flex-direction:column;gap:0.2rem}
+    .toc ul li a{display:block;font-family:var(--ft);font-size:0.82rem;color:var(--text-mid);padding:0.38rem 0.75rem;border-radius:7px;border-left:2px solid transparent;transition:var(--tr)}
+    .toc ul li a:hover{color:var(--text-bright);background:rgba(155,0,255,0.08);border-left-color:var(--neon-purple)}
+    .toc-updated{font-family:var(--ft);font-size:0.72rem;color:var(--text-dim);margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border-glow)}
+
+    /* PRIVACY CONTENT */
+    .privacy-content{}
+    .privacy-section{background:var(--bg-glass);border:1px solid var(--border-glow);backdrop-filter:blur(12px);border-radius:16px;padding:2.2rem;margin-bottom:1.5rem;transition:var(--tr)}
+    .privacy-section:hover{border-color:rgba(155,0,255,0.45)}
+    .ps-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem}
+    .ps-num{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--neon-red),var(--neon-purple));display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:0.72rem;font-weight:900;flex-shrink:0}
+    .ps-title{font-family:var(--fd);font-size:0.9rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+    .ps-body{font-family:var(--ft);font-size:0.9rem;color:var(--text-mid);line-height:1.85}
+    .ps-body p{margin-bottom:0.9rem}
+    .ps-body p:last-child{margin-bottom:0}
+    .ps-body ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin:0.9rem 0}
+    .ps-body ul li{display:flex;align-items:flex-start;gap:0.6rem;font-size:0.88rem}
+    .ps-body ul li::before{content:'▸';color:var(--neon-purple);flex-shrink:0;margin-top:0.1rem}
+    .ps-body a{color:var(--neon-purple);border-bottom:1px solid rgba(155,0,255,0.3);transition:var(--tr)}
+    .ps-body a:hover{color:var(--text-bright);border-bottom-color:var(--text-bright)}
+    .ps-body strong{color:var(--text-bright);font-weight:600}
+
+    /* HIGHLIGHT BOX */
+    .highlight-box{background:rgba(155,0,255,0.07);border:1px solid rgba(155,0,255,0.25);border-radius:10px;padding:1rem 1.25rem;margin:1rem 0;font-family:var(--ft);font-size:0.86rem;color:var(--text-mid);line-height:1.75}
+    .highlight-box.blue{background:rgba(0,212,255,0.07);border-color:rgba(0,212,255,0.25)}
+    .highlight-box.red{background:rgba(255,0,60,0.07);border-color:rgba(255,0,60,0.2)}
+
+    /* ADSENSE NOTE */
+    .adsense-note{background:linear-gradient(135deg,rgba(255,204,0,0.07),rgba(255,102,0,0.05));border:1px solid rgba(255,204,0,0.25);border-radius:12px;padding:1.25rem 1.5rem;display:flex;gap:0.9rem;align-items:flex-start}
+    .adsense-note .ad-ico{font-size:1.4rem;flex-shrink:0}
+    .adsense-note p{font-family:var(--ft);font-size:0.86rem;color:var(--text-mid);line-height:1.75;margin:0}
+    .adsense-note strong{color:#ffcc00}
+
+    /* CONTACT BOX */
+    .contact-box{background:linear-gradient(135deg,rgba(155,0,255,0.12),rgba(0,212,255,0.07));border:1px solid var(--border-glow);border-radius:16px;padding:2rem;text-align:center;margin-top:1.5rem}
+    .contact-box h3{font-family:var(--fd);font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:0.65rem}
+    .contact-box p{font-family:var(--ft);font-size:0.88rem;color:var(--text-mid);margin-bottom:1.25rem;line-height:1.7}
+
+    /* BUTTONS */
+    .btn-primary{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--fd);font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:0.75rem 1.75rem;border-radius:8px;background:linear-gradient(135deg,var(--neon-red),var(--neon-purple));color:#fff;transition:var(--tr);box-shadow:0 0 20px rgba(255,0,60,0.3)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 35px rgba(255,0,60,0.5)}
+    .btn-ghost{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--fd);font-size:0.68rem;letter-spacing:2px;text-transform:uppercase;padding:0.65rem 1.4rem;border-radius:8px;border:1px solid rgba(155,0,255,0.5);color:var(--neon-purple);background:rgba(155,0,255,0.07);transition:var(--tr)}
+    .btn-ghost:hover{background:rgba(155,0,255,0.18);transform:translateY(-1px)}
+
+    /* FOOTER */
+    footer{background:rgba(6,6,15,0.95);border-top:1px solid var(--border-glow);padding:3rem 0 1.75rem;margin-top:1rem}
+    .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+    .foot-desc{font-family:var(--ft);font-size:0.85rem;color:var(--text-mid);line-height:1.7;max-width:250px;margin-top:0.9rem}
+    .foot-social{display:flex;gap:0.6rem;margin-top:1.2rem}
+    .soc{width:34px;height:34px;border-radius:8px;background:rgba(155,0,255,0.07);border:1px solid var(--border-glow);display:flex;align-items:center;justify-content:center;color:var(--text-mid);font-size:0.85rem;transition:var(--tr)}
+    .soc:hover{background:rgba(155,0,255,0.18);color:var(--neon-purple);border-color:var(--neon-purple);transform:translateY(-2px)}
+    .foot-col h4{font-family:var(--fd);font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--neon-purple);margin-bottom:1rem}
+    .foot-col ul li{margin-bottom:0.5rem}
+    .foot-col ul a{font-size:0.83rem;color:var(--text-mid);transition:var(--tr)}
+    .foot-col ul a:hover{color:var(--text-bright);padding-left:4px}
+    .foot-bottom{border-top:1px solid var(--border-glow);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .foot-bottom p{font-size:0.76rem;color:var(--text-dim)}
+    .foot-bottom a{color:var(--neon-purple)}
+
+    #scrollTop{position:fixed;bottom:1.75rem;right:1.75rem;z-index:900;width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--neon-red),var(--neon-purple));display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;cursor:pointer;opacity:0;transform:translateY(20px);pointer-events:none;transition:var(--tr);box-shadow:0 4px 20px rgba(155,0,255,0.3)}
+    #scrollTop.show{opacity:1;transform:translateY(0);pointer-events:all}
+    #scrollTop:hover{transform:translateY(-2px)}
+
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.5s ease,transform 0.5s ease}
+    .reveal.in-view{opacity:1;transform:none}
+
+    @media(max-width:1024px){.privacy-layout{grid-template-columns:1fr}.toc{display:none}.foot-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}.foot-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:480px){.foot-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ff003c"/><stop offset="100%" stop-color="#9b00ff"/></linearGradient></defs>
+          <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="none" stroke="url(#lg)" stroke-width="2.2"/>
+          <polygon points="20,7 31,13.5 31,26.5 20,33 9,26.5 9,13.5" fill="rgba(155,0,255,0.12)"/>
+          <text x="20" y="25" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="13" font-weight="900" fill="url(#lg)">S</text>
+        </svg>
+        <div class="logo-text"><span><span class="red">Shadow</span> Mods</span><small>Hub</small></div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#categories">Categories</a>
+        <a href="index.html#mods-section">Mods</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html" class="active">Privacy</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:0.75rem">
+        <a href="index.html" class="nav-back">← Back to Mods</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">🏠 Home</a>
+  <a href="index.html#categories">🗂️ Categories</a>
+  <a href="index.html#mods-section">🎮 All Mods</a>
+  <a href="about.html">👥 About Us</a>
+  <a href="contact.html">📬 Contact</a>
+  <a href="privacy.html">🔒 Privacy Policy</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-orb orb-a"></div>
+  <div class="page-hero-orb orb-b"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="page-eyebrow">🔒 Legal</div>
+      <h1 class="page-title"><span class="hl">Privacy Policy</span></h1>
+      <p class="page-subtitle">How Shadow Mods Hub collects, uses and protects your information. Last updated: January 1, 2025.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BREADCRUMB -->
+<div style="background:rgba(10,10,24,0.5);border-bottom:1px solid var(--border-glow)">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>›</span>
+      <span style="color:var(--text-mid)">Privacy Policy</span>
+    </div>
+  </div>
+</div>
+
+<!-- PRIVACY LAYOUT -->
+<div class="container">
+  <div class="privacy-layout">
+
+    <!-- SIDEBAR TOC -->
+    <aside class="toc">
+      <div class="toc-title">Contents</div>
+      <ul>
+        <li><a href="#s1">1. Introduction</a></li>
+        <li><a href="#s2">2. Information We Collect</a></li>
+        <li><a href="#s3">3. How We Use Your Info</a></li>
+        <li><a href="#s4">4. Google AdSense & Ads</a></li>
+        <li><a href="#s5">5. Cookies</a></li>
+        <li><a href="#s6">6. Third-Party Links</a></li>
+        <li><a href="#s7">7. Children's Privacy</a></li>
+        <li><a href="#s8">8. Data Security</a></li>
+        <li><a href="#s9">9. Your Rights</a></li>
+        <li><a href="#s10">10. Changes to Policy</a></li>
+        <li><a href="#s11">11. Contact Us</a></li>
+      </ul>
+      <div class="toc-updated">📅 Last updated<br/>January 1, 2025</div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="privacy-content">
+
+      <div class="privacy-section reveal" id="s1">
+        <div class="ps-header">
+          <div class="ps-num">01</div>
+          <div class="ps-title">Introduction</div>
+        </div>
+        <div class="ps-body">
+          <p>Welcome to <strong>Shadow Mods Hub</strong> ("we", "our", or "us"). We operate the website at shadowmodshub.com (the "Site"), a fan-made resource providing free GTA San Andreas and GTA Vice City mods.</p>
+          <p>This Privacy Policy explains what information we collect when you visit our Site, how we use that information, and what choices you have regarding your data. By using Shadow Mods Hub, you agree to the practices described in this policy.</p>
+          <div class="highlight-box">
+            <strong>Plain English:</strong> We are a simple mod-listing website. We do not require accounts, we do not sell your personal data, and we do not store any personally identifiable information on our own servers.
+          </div>
+        </div>
+      </div>
+
+      <div class="privacy-section reveal" id="s2">
+        <div class="ps-header">
+          <div class="ps-num">02</div>
+          <div class="ps-title">Information We Collect</div>
+        </div>
+        <div class="ps-body">
+          <p>We collect information in two ways:</p>
+          <p><strong>Information you provide voluntarily:</strong></p>
+          <ul>
+            <li>Contact form submissions (name, email address, message content)</li>
+            <li>Mod submission details (mod name, description, download link)</li>
+          </ul>
+          <p><strong>Information collected automatically:</strong></p>
+          <ul>
+            <li>IP address and approximate geographic location (country/city level)</li>
+            <li>Browser type, operating system and device type</li>
+            <li>Pages visited, time spent on pages, links clicked</li>
+            <li>Referring website (where you came from)</li>
+            <li>Date and time of your visit</li>
+          </ul>
+          <p>This automatic data is collected via standard web server logs and analytics tools. We do <strong>not</strong> collect payment information, social security numbers, or any sensitive personal data.</p>
+        </div>
+      </div>
+
+      <div class="privacy-section reveal" id="s3">
+        <div class="ps-header">
+          <div class="ps-num">03</div>
+          <div class="ps-title">How We Use Your Information</div>
+        </div>
+        <div class="ps-body">
+          <p>We use the information we collect for the following purposes:</p>
+          <ul>
+            <li>To respond to contact form submissions and mod requests</li>
+            <li>To understand how visitors use our Site so we can improve it</li>
+            <li>To identify and fix technical problems (broken links, errors)</li>
+            <li>To monitor for abusive or spam behaviour</li>
+            <li>To display relevant advertisements through Google AdSense</li>
+            <li>To comply with legal obligations</li>
+          </ul>
+          <p>We do <strong>not</strong> sell, rent or trade your personal information to any third party for marketing purposes. We do not send unsolicited emails or newsletters unless you explicitly request them.</p>
+        </div>
+      </div>
+
+      <div class="privacy-section reveal" id="s4">
+        <div class="ps-header">
+          <div class="ps-num">04</div>
+          <div class="ps-title">Google AdSense &amp; Advertising</div>
+        </div>
+        <div class="ps-body">
+          <div class="adsense-note">
+            <div class="ad-ico">📢</div>
+            <p><strong>AdSense Notice:</strong> Shadow Mods Hub may use <strong>Google AdSense</strong> to display advertisements. Google, as a third-party vendor, uses cookies to serve ads based on your prior visits to our site or other sites on the Internet. Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to our site and/or other sites on the Internet.</p>
+          </div>
+          <p>Specifically, Google AdSense may:</p>
+          <ul>
+            <li>Use the <strong>DoubleClick cookie</strong> to serve interest-based ads to you across websites</li>
+            <li>Use cookies to track how many times you have seen a particular ad</li>
+            <li>Collect data about your interactions with ads (clicks, impressions, views)</li>
+          </ul>
+          <p>You may <strong>opt out</strong> of interest-based advertising by visiting the <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings page</a> or by visiting the <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">Network Advertising Initiative opt-out page</a>.</p>
+          <div class="highlight-box blue">
+            For more information about how Google uses data when you use our site, visit: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses data when you use our partners' sites or apps</a>.
+          </div>
+        </div>
+      </div>
+
+      <div class="privacy-section reveal" id="s5">
+        <div class="ps-header">
+          <div class="ps-num">05</div>
+          <div class="ps-title">Cookies</div>
+        </div>
+        <div class="ps-body">
+          <p>Cookies are small text files stored on your device by your web browser. Shadow Mods Hub and its third-party partners use cookies for the following purposes:</p>
+          <ul>
+            <li><strong>Analytics cookies:</strong> Help us understand how visitors use our site (e.g., Google Analytics)</li>
+            <li><strong>Advertising cookies:</strong> Used by Google AdSense to serve relevant advertisements</li>
+            <li><strong>Functional cookies:</strong> Remember your preferences (e.g., search filters)</li>
+          </ul>
+          <p><strong>How to control cookies:</strong> You can control and/or delete cookies as you wish. You can delete all cookies that are already on your device, and you can set most browsers to prevent them from being placed. However, if you do this, you may have to manually adjust some preferences every time you visit a site.</p>
+          <p>To manage cookies in your browser:</p>
+          <ul>
+            <li><strong>Chrome:</strong> Settings → Privacy and security → Cookies and other site data</li>
+            <li><strong>Firefox:</strong> Options → Privacy &amp; Security → Cookies and Site Data</li>
+            <li><strong>Safari:</strong> Preferences → Privacy → Manage Website Data</li>
+            <li><strong>Edge:</strong> Settings → Cookies and site permissions</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="privacy-section reveal" id="s6">
+        <div class="ps-header">
+          <div class="ps-num">06</div>
+          <div class="ps-title">Third-Party Links &amp; Downloads</div>
+        </div>
+        <div class="ps-body">
+          <p>Shadow Mods Hub links to third-party websites for mod downloads (e.g., MediaFire, Google Drive, Mega.nz, GTAInside). These sites have their own privacy policies and terms of service, which we strongly encourage you to review.</p>
+          <div class="highlight-box red">
+            <strong>Important:</strong> We are not responsible for the privacy practices or content of external websites. When you click a download link, you are leaving Shadow Mods Hub and visiting a third-party site. We cannot control what information those sites collect or how they use it.
+          </div>
+          <p>We do our best to verify that download links point to legitimate, clean files. However, we cannot guarantee the safety of all third-party hosted content. Always use antivirus software when downloading files from the internet.</p>
+        </div>
+      </div>
+
+      <div class="privacy-section reveal" id="s7">
+        <div class="ps-header">
+          <div class="ps-num">07</div>
+          <div class="ps-title">Children's Privacy</div>
+        </div>
+        <div class="ps-body">
+          <p>Shadow Mods Hub is a gaming resource website. The GTA game series is rated <strong>M (Mature 17+)</strong> by the ESRB. Our site is intended for users who are of appropriate age to play these games according to their region's rating system.</p>
+          <p>We do not knowingly collect personal information from children under the age of 13. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us immediately using the details in Section 11 and we will delete that information promptly.</p>
+          <p>Our Site complies with the Children's Online Privacy Protection Act (COPPA) and similar regulations worldwide.</p>
+        </div>
+      </div>
+
+      <div class="privacy-section reveal" id="s8">
+        <div class="ps-header">
+          <div class="ps-num">08</div>
+          <div class="ps-title">Data Security</div>
+        </div>
+        <div class="ps-body">
+          <p>We take reasonable measures to protect the information submitted to us from loss, misuse and unauthorised access. However, no internet transmission or electronic storage is 100% secure.</p>
+          <p>We implement the following security measures:</p>
+          <ul>
+            <li>HTTPS encryption for all Site traffic</li>
+            <li>Regular security reviews of our hosting infrastructure</li>
+            <li>Limited access to any submitted data (contact form submissions)</li>
+            <li>No storage of payment information (we have no payment system)</li>
+          </ul>
+          <p>Since our Site does not require user accounts or login, the risk to your personal data is minimal. We encourage you to use strong, unique passwords on any accounts you create on third-party mod hosting sites.</p>
+        </div>
+      </div>
+
+      <div class="privacy-section reveal" id="s9">
+        <div class="ps-header">
+          <div class="ps-num">09</div>
+          <div class="ps-title">Your Rights</div>
+        </div>
+        <div class="ps-body">
+          <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+          <ul>
+            <li><strong>Right to access:</strong> Request a copy of the personal data we hold about you</li>
+            <li><strong>Right to rectification:</strong> Request correction of inaccurate data</li>
+            <li><strong>Right to erasure:</strong> Request deletion of your personal data</li>
+            <li><strong>Right to restrict processing:</strong> Request that we limit how we use your data</li>
+            <li><strong>Right to object:</strong> Object to our processing of your data</li>
+            <li><strong>Right to data portability:</strong> Request a copy of your data in a portable format</li>
+          </ul>
+          <p>EU/EEA users have these rights under the <strong>General Data Protection Regulation (GDPR)</strong>. California users have rights under the <strong>California Consumer Privacy Act (CCPA)</strong>.</p>
+          <p>To exercise any of these rights, please contact us using the details in Section 11. We will respond within 30 days.</p>
+        </div>
+      </div>
+
+      <div class="privacy-section reveal" id="s10">
+        <div class="ps-header">
+          <div class="ps-num">10</div>
+          <div class="ps-title">Changes to This Policy</div>
+        </div>
+        <div class="ps-body">
+          <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements or other factors. When we make significant changes, we will update the "Last Updated" date at the top of this page.</p>
+          <p>We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information. Your continued use of Shadow Mods Hub after any changes constitutes your acceptance of the updated policy.</p>
+          <div class="highlight-box">
+            This policy was last reviewed and updated on <strong>January 1, 2025</strong>.
+          </div>
+        </div>
+      </div>
+
+      <div class="privacy-section reveal" id="s11">
+        <div class="ps-header">
+          <div class="ps-num">11</div>
+          <div class="ps-title">Contact Us</div>
+        </div>
+        <div class="ps-body">
+          <p>If you have any questions, concerns or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+          <ul>
+            <li><strong>Website:</strong> <a href="contact.html">shadowmodshub.com/contact.html</a></li>
+            <li><strong>Email:</strong> privacy@shadowmodshub.com</li>
+            <li><strong>Response time:</strong> We aim to respond within 48 hours</li>
+          </ul>
+          <p>This website is a fan-made project and is <strong>not affiliated with, endorsed by, or connected to Rockstar Games, Take-Two Interactive, or any of their subsidiaries</strong>. GTA, Grand Theft Auto, GTA San Andreas and GTA Vice City are registered trademarks of their respective owners.</p>
+        </div>
+      </div>
+
+      <!-- CONTACT CTA -->
+      <div class="contact-box reveal">
+        <h3>Have a Privacy Question?</h3>
+        <p>Our team is happy to help with any data or privacy concerns. We aim to respond within 48 hours.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+          <a href="contact.html" class="btn-primary">📬 Contact Us</a>
+          <a href="index.html" class="btn-ghost">🏠 Back to Home</a>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" class="nav-logo">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="width:32px;height:32px">
+            <defs><linearGradient id="flg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ff003c"/><stop offset="100%" stop-color="#9b00ff"/></linearGradient></defs>
+            <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="none" stroke="url(#flg)" stroke-width="2"/>
+            <polygon points="20,7 31,13.5 31,26.5 20,33 9,26.5 9,13.5" fill="rgba(155,0,255,0.12)"/>
+            <text x="20" y="25" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="13" font-weight="900" fill="url(#flg)">S</text>
+          </svg>
+          <div class="logo-text"><span><span class="red">Shadow</span> Mods</span><small>Hub</small></div>
+        </a>
+        <p class="foot-desc">Free GTA San Andreas and Vice City mods. No login required. Fan-made site not affiliated with Rockstar Games.</p>
+        <div class="foot-social">
+          <a href="#" class="soc">💬</a><a href="#" class="soc">▶️</a><a href="#" class="soc">✈️</a><a href="#" class="soc">🔴</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#categories">Categories</a></li>
+          <li><a href="index.html#mods-section">All Mods</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Mods</h4>
+        <ul>
+          <li><a href="index.html">GTA SA Mods</a></li>
+          <li><a href="index.html">Vice City Mods</a></li>
+          <li><a href="index.html">Anime Packs</a></li>
+          <li><a href="index.html">Car Mods</a></li>
+          <li><a href="index.html">Graphics ENB</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2025 <a href="index.html">Shadow Mods Hub</a>. Fan-made. Not affiliated with Rockstar Games.</p>
+      <p>Made with ❤️ for the GTA modding community.</p>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  const nb=document.getElementById('navbar'),st=document.getElementById('scrollTop');
+  window.addEventListener('scroll',()=>{nb.classList.toggle('scrolled',scrollY>50);st.classList.toggle('show',scrollY>400)});
+  const ham=document.getElementById('hamburger'),mob=document.getElementById('mobileMenu');
+  ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.toggle('open')});
+  mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');mob.classList.remove('open')}));
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target)}})},{threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // Smooth scroll for TOC links
+  document.querySelectorAll('.toc a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      e.preventDefault();
+      const t=document.querySelector(a.getAttribute('href'));
+      if(t) window.scrollTo({top:t.offsetTop-100,behavior:'smooth'});
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Contact Us – Shadow Mods Hub | GTA SA & Vice City Mods</title>
+  <meta name="description" content="Contact Shadow Mods Hub — submit a mod, report a broken link, ask a question or give feedback about our GTA San Andreas and Vice City mod website."/>
+  <meta name="keywords" content="Shadow Mods Hub contact, GTA mods contact, submit mod, report mod, GTA SA mods"/>
+  <meta name="author" content="Shadow Mods Hub"/>
+  <meta property="og:title" content="Contact Us – Shadow Mods Hub"/>
+  <meta property="og:description" content="Get in touch with the Shadow Mods Hub team. Submit mods, report issues or send feedback."/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="canonical" href="https://shadowmodshub.com/contact.html"/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff003c'/%3E%3Cstop offset='1' stop-color='%237f00ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='12' fill='%230a0a0f'/%3E%3Cpolygon points='32,8 52,22 52,42 32,56 12,42 12,22' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-size='18' font-weight='900' fill='url(%23g)' font-family='Arial'%3ES%3C/text%3E%3C/svg%3E"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --bg-deep:#06060f;--bg-dark:#0a0a18;--bg-glass:rgba(15,15,35,0.75);
+      --neon-red:#ff003c;--neon-purple:#9b00ff;--neon-blue:#00d4ff;--neon-pink:#ff0080;
+      --text-bright:#f0f0ff;--text-mid:#a0a0c0;--text-dim:#55556a;
+      --border-glow:rgba(155,0,255,0.35);
+      --fd:'Orbitron',sans-serif;--fb:'Rajdhani',sans-serif;--ft:'Exo 2',sans-serif;
+      --tr:0.3s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg-deep);color:var(--text-bright);font-family:var(--fb);overflow-x:hidden;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    ul{list-style:none}
+    button{cursor:pointer;border:none;background:none;font-family:inherit}
+    ::-webkit-scrollbar{width:5px}
+    ::-webkit-scrollbar-track{background:var(--bg-deep)}
+    ::-webkit-scrollbar-thumb{background:var(--neon-purple);border-radius:3px}
+    body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(155,0,255,0.04)1px,transparent 1px),linear-gradient(90deg,rgba(155,0,255,0.04)1px,transparent 1px);background-size:60px 60px}
+    .container{max-width:1200px;margin:0 auto;padding:0 1.5rem;position:relative;z-index:1}
+
+    /* NAV */
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:68px;background:rgba(6,6,15,0.88);border-bottom:1px solid var(--border-glow);backdrop-filter:blur(24px);transition:var(--tr)}
+    #navbar.scrolled{background:rgba(6,6,15,0.98);box-shadow:0 4px 30px rgba(155,0,255,0.12)}
+    .nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+    .nav-logo{display:flex;align-items:center;gap:0.6rem;flex-shrink:0}
+    .nav-logo svg{width:36px;height:36px;filter:drop-shadow(0 0 8px rgba(255,0,60,0.5))}
+    .logo-text{font-family:var(--fd);font-weight:900;font-size:1rem;line-height:1}
+    .logo-text .red{color:var(--neon-red)}
+    .logo-text small{display:block;font-size:0.55rem;letter-spacing:4px;color:var(--neon-purple);margin-top:2px}
+    .nav-links{display:flex;align-items:center;gap:0.2rem}
+    .nav-links a{font-family:var(--fd);font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;padding:0.4rem 0.8rem;border-radius:6px;color:var(--text-mid);transition:var(--tr)}
+    .nav-links a:hover,.nav-links a.active{color:var(--text-bright);background:rgba(155,0,255,0.1)}
+    .nav-links a.active{color:var(--neon-purple)}
+    .nav-back{font-family:var(--fd);font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;padding:0.42rem 1rem;border-radius:7px;background:linear-gradient(135deg,var(--neon-red),var(--neon-purple));color:#fff;transition:var(--tr);flex-shrink:0}
+    .nav-back:hover{opacity:0.88;transform:translateY(-1px)}
+    .hamburger{display:none;flex-direction:column;gap:5px;padding:6px}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--text-mid);border-radius:2px;transition:var(--tr)}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(6,6,15,0.98);border-bottom:1px solid var(--border-glow);backdrop-filter:blur(20px);z-index:999;padding:1.25rem;flex-direction:column;gap:0.4rem}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{font-family:var(--fd);font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--text-mid);padding:0.7rem 1rem;border-radius:8px;transition:var(--tr)}
+    .mobile-menu a:hover{color:var(--text-bright);background:rgba(155,0,255,0.1)}
+
+    /* PAGE HERO */
+    .page-hero{min-height:38vh;display:flex;align-items:center;justify-content:center;padding-top:68px;position:relative;overflow:hidden;text-align:center}
+    .page-hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 70% 80% at 50% 60%,rgba(0,212,255,0.15) 0%,transparent 65%),radial-gradient(ellipse 50% 50% at 80% 20%,rgba(155,0,255,0.12) 0%,transparent 55%),linear-gradient(180deg,var(--bg-deep) 0%,#0d0d22 100%)}
+    .page-hero-orb{position:absolute;border-radius:50%;filter:blur(80px);animation:floatOrb 8s ease-in-out infinite}
+    .orb-a{width:380px;height:380px;background:rgba(0,212,255,0.08);top:-80px;right:-80px}
+    .orb-b{width:260px;height:260px;background:rgba(155,0,255,0.08);bottom:0;left:-60px;animation-delay:-3s}
+    @keyframes floatOrb{0%,100%{transform:translateY(0)}50%{transform:translateY(-25px)}}
+    .page-hero-content{position:relative;z-index:1;padding:3rem 0}
+    .page-eyebrow{display:inline-flex;align-items:center;gap:0.6rem;font-family:var(--fd);font-size:0.6rem;letter-spacing:4px;text-transform:uppercase;color:var(--neon-blue);background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.25);padding:0.3rem 1rem;border-radius:50px;margin-bottom:1.2rem}
+    .page-eyebrow::before{content:'';width:6px;height:6px;background:var(--neon-blue);border-radius:50%;animation:blink 2s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
+    .page-title{font-family:var(--fd);font-weight:900;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-0.5px;margin-bottom:1rem}
+    .page-title .hl{background:linear-gradient(135deg,var(--neon-blue),var(--neon-purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .page-subtitle{font-family:var(--ft);font-size:1rem;color:var(--text-mid);max-width:520px;margin:0 auto;line-height:1.8}
+
+    /* BREADCRUMB */
+    .breadcrumb{padding:1rem 0;display:flex;align-items:center;gap:0.5rem;font-family:var(--fd);font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim)}
+    .breadcrumb a{color:var(--neon-purple);transition:var(--tr)}
+    .breadcrumb a:hover{color:var(--text-bright)}
+
+    /* CONTACT LAYOUT */
+    .contact-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:3rem;padding:5rem 0;align-items:start}
+
+    /* INFO CARDS */
+    .info-cards{display:flex;flex-direction:column;gap:1.25rem}
+    .info-card{background:var(--bg-glass);border:1px solid var(--border-glow);backdrop-filter:blur(12px);border-radius:16px;padding:1.5rem;display:flex;align-items:flex-start;gap:1rem;transition:var(--tr)}
+    .info-card:hover{border-color:rgba(155,0,255,0.55);transform:translateX(4px)}
+    .info-ico{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--ic1),var(--ic2));display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+    .info-label{font-family:var(--fd);font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);margin-bottom:0.3rem}
+    .info-value{font-family:var(--fd);font-size:0.82rem;font-weight:700;color:var(--text-bright);margin-bottom:0.3rem}
+    .info-sub{font-family:var(--ft);font-size:0.8rem;color:var(--text-mid)}
+
+    /* SOCIAL LINKS */
+    .social-section{background:var(--bg-glass);border:1px solid var(--border-glow);backdrop-filter:blur(12px);border-radius:16px;padding:1.5rem;margin-top:0}
+    .social-title{font-family:var(--fd);font-size:0.65rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--neon-purple);margin-bottom:1rem}
+    .social-links{display:flex;flex-direction:column;gap:0.6rem}
+    .social-link{display:flex;align-items:center;gap:0.75rem;padding:0.65rem 0.9rem;border-radius:10px;border:1px solid transparent;transition:var(--tr)}
+    .social-link:hover{background:rgba(155,0,255,0.1);border-color:var(--border-glow)}
+    .social-link span:first-child{font-size:1.2rem;width:28px;text-align:center}
+    .social-link .sl-name{font-family:var(--fd);font-size:0.68rem;font-weight:700;color:var(--text-bright)}
+    .social-link .sl-handle{font-size:0.72rem;color:var(--text-dim);font-family:var(--ft)}
+
+    /* FORM */
+    .contact-form-wrap{background:var(--bg-glass);border:1px solid var(--border-glow);backdrop-filter:blur(16px);border-radius:20px;padding:2.5rem}
+    .form-title{font-family:var(--fd);font-size:1rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:0.4rem}
+    .form-subtitle{font-family:var(--ft);font-size:0.88rem;color:var(--text-mid);margin-bottom:2rem;line-height:1.6}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:1.1rem}
+    .form-group{display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1.1rem}
+    .form-group label{font-family:var(--fd);font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;color:var(--neon-purple)}
+    .form-group input,.form-group select,.form-group textarea{
+      background:rgba(255,255,255,0.04);border:1px solid var(--border-glow);
+      border-radius:10px;padding:0.75rem 1rem;
+      color:var(--text-bright);font-family:var(--ft);font-size:0.9rem;
+      outline:none;transition:var(--tr);width:100%;
+    }
+    .form-group input::placeholder,.form-group textarea::placeholder{color:var(--text-dim)}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--neon-purple);box-shadow:0 0 14px rgba(155,0,255,0.18)}
+    .form-group select option{background:#0a0a18;color:var(--text-bright)}
+    .form-group textarea{resize:vertical;min-height:130px}
+    .form-note{font-family:var(--ft);font-size:0.78rem;color:var(--text-dim);margin-bottom:1.5rem;line-height:1.6}
+    .submit-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:0.5rem;font-family:var(--fd);font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:0.9rem 2rem;border-radius:10px;background:linear-gradient(135deg,var(--neon-red),var(--neon-purple));color:#fff;transition:var(--tr);box-shadow:0 0 20px rgba(255,0,60,0.25);cursor:pointer;border:none}
+    .submit-btn:hover{transform:translateY(-2px);box-shadow:0 0 35px rgba(255,0,60,0.45)}
+    .submit-btn:active{transform:translateY(0)}
+
+    /* SUCCESS MESSAGE */
+    .form-success{display:none;text-align:center;padding:2rem;background:rgba(0,255,136,0.07);border:1px solid rgba(0,255,136,0.25);border-radius:12px;margin-top:1rem}
+    .form-success .success-icon{font-size:2.5rem;margin-bottom:0.75rem}
+    .form-success h3{font-family:var(--fd);font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;color:#00ff88;margin-bottom:0.5rem}
+    .form-success p{font-family:var(--ft);color:var(--text-mid);font-size:0.88rem;line-height:1.6}
+
+    /* FAQ */
+    .faq-section{padding:5rem 0}
+    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.5rem}
+    .faq-item{background:var(--bg-glass);border:1px solid var(--border-glow);backdrop-filter:blur(12px);border-radius:14px;padding:1.5rem;transition:var(--tr)}
+    .faq-item:hover{border-color:rgba(155,0,255,0.5);transform:translateY(-3px)}
+    .faq-q{font-family:var(--fd);font-size:0.75rem;font-weight:700;letter-spacing:1px;color:var(--text-bright);margin-bottom:0.65rem;display:flex;gap:0.5rem}
+    .faq-q::before{content:'Q';color:var(--neon-purple);flex-shrink:0}
+    .faq-a{font-family:var(--ft);font-size:0.85rem;color:var(--text-mid);line-height:1.7}
+
+    /* BUTTONS */
+    .btn-primary{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--fd);font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:0.75rem 1.75rem;border-radius:8px;background:linear-gradient(135deg,var(--neon-red),var(--neon-purple));color:#fff;transition:var(--tr);box-shadow:0 0 20px rgba(255,0,60,0.3)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 35px rgba(255,0,60,0.5)}
+    .btn-ghost{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--fd);font-size:0.68rem;letter-spacing:2px;text-transform:uppercase;padding:0.65rem 1.4rem;border-radius:8px;border:1px solid rgba(155,0,255,0.5);color:var(--neon-purple);background:rgba(155,0,255,0.07);transition:var(--tr)}
+    .btn-ghost:hover{background:rgba(155,0,255,0.18);box-shadow:0 0 20px rgba(155,0,255,0.25);transform:translateY(-1px)}
+
+    /* FOOTER */
+    footer{background:rgba(6,6,15,0.95);border-top:1px solid var(--border-glow);padding:3rem 0 1.75rem;margin-top:1rem}
+    .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+    .foot-desc{font-family:var(--ft);font-size:0.85rem;color:var(--text-mid);line-height:1.7;max-width:250px;margin-top:0.9rem}
+    .foot-social{display:flex;gap:0.6rem;margin-top:1.2rem}
+    .soc{width:34px;height:34px;border-radius:8px;background:rgba(155,0,255,0.07);border:1px solid var(--border-glow);display:flex;align-items:center;justify-content:center;color:var(--text-mid);font-size:0.85rem;transition:var(--tr)}
+    .soc:hover{background:rgba(155,0,255,0.18);color:var(--neon-purple);border-color:var(--neon-purple);transform:translateY(-2px)}
+    .foot-col h4{font-family:var(--fd);font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--neon-purple);margin-bottom:1rem}
+    .foot-col ul li{margin-bottom:0.5rem}
+    .foot-col ul a{font-size:0.83rem;color:var(--text-mid);transition:var(--tr)}
+    .foot-col ul a:hover{color:var(--text-bright);padding-left:4px}
+    .foot-bottom{border-top:1px solid var(--border-glow);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .foot-bottom p{font-size:0.76rem;color:var(--text-dim)}
+    .foot-bottom a{color:var(--neon-purple)}
+
+    #scrollTop{position:fixed;bottom:1.75rem;right:1.75rem;z-index:900;width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--neon-red),var(--neon-purple));display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;cursor:pointer;opacity:0;transform:translateY(20px);pointer-events:none;transition:var(--tr);box-shadow:0 4px 20px rgba(155,0,255,0.3)}
+    #scrollTop.show{opacity:1;transform:translateY(0);pointer-events:all}
+    #scrollTop:hover{transform:translateY(-2px)}
+
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity 0.55s ease,transform 0.55s ease}
+    .reveal.in-view{opacity:1;transform:none}
+    .r1{transition-delay:0.1s}.r2{transition-delay:0.2s}.r3{transition-delay:0.3s}
+
+    .s-title{font-family:var(--fd);font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:700;letter-spacing:2px;text-transform:uppercase;display:inline-flex;align-items:center;gap:0.65rem;margin-bottom:0}
+    .s-title .line{display:inline-block;width:30px;height:3px;background:linear-gradient(90deg,var(--neon-red),var(--neon-purple));border-radius:2px}
+
+    @media(max-width:1024px){.contact-grid{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}.faq-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:480px){.foot-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ff003c"/><stop offset="100%" stop-color="#9b00ff"/></linearGradient></defs>
+          <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="none" stroke="url(#lg)" stroke-width="2.2"/>
+          <polygon points="20,7 31,13.5 31,26.5 20,33 9,26.5 9,13.5" fill="rgba(155,0,255,0.12)"/>
+          <text x="20" y="25" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="13" font-weight="900" fill="url(#lg)">S</text>
+        </svg>
+        <div class="logo-text"><span><span class="red">Shadow</span> Mods</span><small>Hub</small></div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#categories">Categories</a>
+        <a href="index.html#mods-section">Mods</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:0.75rem">
+        <a href="index.html" class="nav-back">← Back to Mods</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">🏠 Home</a>
+  <a href="index.html#categories">🗂️ Categories</a>
+  <a href="index.html#mods-section">🎮 All Mods</a>
+  <a href="about.html">👥 About Us</a>
+  <a href="contact.html">📬 Contact</a>
+  <a href="privacy.html">🔒 Privacy Policy</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-orb orb-a"></div>
+  <div class="page-hero-orb orb-b"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="page-eyebrow">📬 Get In Touch</div>
+      <h1 class="page-title">Contact <span class="hl">Shadow Mods Hub</span></h1>
+      <p class="page-subtitle">Submit a mod, report a broken link, suggest a feature or just say hello. We read every message.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BREADCRUMB -->
+<div style="background:rgba(10,10,24,0.5);border-bottom:1px solid var(--border-glow)">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>›</span>
+      <span style="color:var(--text-mid)">Contact</span>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT GRID -->
+<div class="container">
+  <div class="contact-grid">
+
+    <!-- LEFT: Info + social -->
+    <div>
+      <div class="info-cards reveal">
+
+        <div class="info-card" style="--ic1:#ff003c;--ic2:#9b00ff">
+          <div class="info-ico">📧</div>
+          <div>
+            <div class="info-label">Email Us</div>
+            <div class="info-value">contact@shadowmodshub.com</div>
+            <div class="info-sub">We reply within 24–48 hours</div>
+          </div>
+        </div>
+
+        <div class="info-card" style="--ic1:#00d4ff;--ic2:#0080ff">
+          <div class="info-ico">💬</div>
+          <div>
+            <div class="info-label">Discord Community</div>
+            <div class="info-value">discord.gg/shadowmodshub</div>
+            <div class="info-sub">Fastest way to get help — active daily</div>
+          </div>
+        </div>
+
+        <div class="info-card" style="--ic1:#9b00ff;--ic2:#ff00ff">
+          <div class="info-ico">🎮</div>
+          <div>
+            <div class="info-label">Submit a Mod</div>
+            <div class="info-value">Use the form →</div>
+            <div class="info-sub">We review all submissions within 3 days</div>
+          </div>
+        </div>
+
+        <div class="info-card" style="--ic1:#00ff88;--ic2:#00d4ff">
+          <div class="info-ico">⚠️</div>
+          <div>
+            <div class="info-label">Report an Issue</div>
+            <div class="info-value">Broken link or bad mod?</div>
+            <div class="info-sub">We'll fix it within 24 hours</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="social-section reveal r1" style="margin-top:1.25rem">
+        <div class="social-title">Follow Us</div>
+        <div class="social-links">
+          <a href="#" class="social-link">
+            <span>💬</span>
+            <div><div class="sl-name">Discord</div><div class="sl-handle">discord.gg/shadowmodshub</div></div>
+          </a>
+          <a href="#" class="social-link">
+            <span>▶️</span>
+            <div><div class="sl-name">YouTube</div><div class="sl-handle">@ShadowModsHub</div></div>
+          </a>
+          <a href="#" class="social-link">
+            <span>✈️</span>
+            <div><div class="sl-name">Telegram</div><div class="sl-handle">t.me/shadowmodshub</div></div>
+          </a>
+          <a href="#" class="social-link">
+            <span>🔴</span>
+            <div><div class="sl-name">Reddit</div><div class="sl-handle">r/ShadowModsHub</div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Form -->
+    <div class="contact-form-wrap reveal r2">
+      <div class="form-title">Send Us a Message</div>
+      <div class="form-subtitle">Fill in the form below and we'll get back to you as soon as possible.</div>
+
+      <form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name *</label>
+            <input type="text" id="fname" placeholder="Your first name" required/>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Your last name"/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" placeholder="your@email.com" required/>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <select id="subject" required>
+            <option value="" disabled selected>Select a topic…</option>
+            <option value="submit">Submit a Mod</option>
+            <option value="broken">Report Broken Link</option>
+            <option value="request">Mod Request</option>
+            <option value="feedback">General Feedback</option>
+            <option value="collab">Collaboration</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" placeholder="Describe your request, mod link, or feedback in detail…" required></textarea>
+        </div>
+
+        <div class="form-note">
+          ⚠️ We do not share your email with third parties. See our <a href="privacy.html" style="color:var(--neon-purple)">Privacy Policy</a> for details.
+          This site is fan-made and not affiliated with Rockstar Games.
+        </div>
+
+        <button type="submit" class="submit-btn">📨 Send Message</button>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">✅</div>
+        <h3>Message Sent!</h3>
+        <p>Thanks for reaching out. We'll reply to your email within 24–48 hours. In the meantime, check out our <a href="index.html" style="color:var(--neon-purple)">latest mods</a>.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq-section" style="background:rgba(15,15,35,0.3)">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:0" class="reveal">
+      <h2 class="s-title" style="justify-content:center;margin-bottom:0.75rem"><span class="line"></span> Frequently Asked Questions</h2>
+      <p style="font-family:var(--ft);color:var(--text-mid);max-width:520px;margin:0 auto;line-height:1.8">Quick answers to the most common questions.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item reveal">
+        <div class="faq-q">Are all mods free to download?</div>
+        <div class="faq-a">Yes, 100%. Every mod on Shadow Mods Hub is completely free. No account, no subscription, no hidden fees — ever.</div>
+      </div>
+      <div class="faq-item reveal r1">
+        <div class="faq-q">How do I install a mod?</div>
+        <div class="faq-a">Most mods come with a README file. Generally: extract the zip, copy the files to your GTA game folder, and use a mod installer like CLEO or IMG Tool. Instructions vary per mod.</div>
+      </div>
+      <div class="faq-item reveal r2">
+        <div class="faq-q">Can I submit my own mod?</div>
+        <div class="faq-a">Absolutely! Use the contact form above and select "Submit a Mod". Include a description, working download link and at least one screenshot. We review all submissions.</div>
+      </div>
+      <div class="faq-item reveal r3">
+        <div class="faq-q">A download link is broken. What do I do?</div>
+        <div class="faq-a">Use the form above and select "Report Broken Link". Tell us the mod name and we'll fix or replace the link within 24 hours.</div>
+      </div>
+      <div class="faq-item reveal r1">
+        <div class="faq-q">Do the mods work on mobile GTA?</div>
+        <div class="faq-a">Most mods are designed for the PC versions of GTA SA and Vice City. Mobile modding is limited and varies by device. Check each mod's description for compatibility notes.</div>
+      </div>
+      <div class="faq-item reveal r2">
+        <div class="faq-q">How long does it take to get a reply?</div>
+        <div class="faq-a">We aim to reply to all emails and form submissions within 24–48 hours. For the fastest response, join our Discord server where the team is active daily.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" class="nav-logo">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="width:32px;height:32px">
+            <defs><linearGradient id="flg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ff003c"/><stop offset="100%" stop-color="#9b00ff"/></linearGradient></defs>
+            <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="none" stroke="url(#flg)" stroke-width="2"/>
+            <polygon points="20,7 31,13.5 31,26.5 20,33 9,26.5 9,13.5" fill="rgba(155,0,255,0.12)"/>
+            <text x="20" y="25" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="13" font-weight="900" fill="url(#flg)">S</text>
+          </svg>
+          <div class="logo-text"><span><span class="red">Shadow</span> Mods</span><small>Hub</small></div>
+        </a>
+        <p class="foot-desc">Free GTA San Andreas and Vice City mods. No login required. Fan-made site not affiliated with Rockstar Games.</p>
+        <div class="foot-social">
+          <a href="#" class="soc">💬</a><a href="#" class="soc">▶️</a><a href="#" class="soc">✈️</a><a href="#" class="soc">🔴</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#categories">Categories</a></li>
+          <li><a href="index.html#mods-section">All Mods</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Mods</h4>
+        <ul>
+          <li><a href="index.html">GTA SA Mods</a></li>
+          <li><a href="index.html">Vice City Mods</a></li>
+          <li><a href="index.html">Anime Packs</a></li>
+          <li><a href="index.html">Car Mods</a></li>
+          <li><a href="index.html">Graphics ENB</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2025 <a href="index.html">Shadow Mods Hub</a>. Fan-made. Not affiliated with Rockstar Games.</p>
+      <p>Made with ❤️ for the GTA modding community.</p>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  const nb=document.getElementById('navbar'),st=document.getElementById('scrollTop');
+  window.addEventListener('scroll',()=>{nb.classList.toggle('scrolled',scrollY>50);st.classList.toggle('show',scrollY>400)});
+  const ham=document.getElementById('hamburger'),mob=document.getElementById('mobileMenu');
+  ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.toggle('open')});
+  mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');mob.classList.remove('open')}));
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target)}})},{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  function handleSubmit(e){
+    e.preventDefault();
+    const fname=document.getElementById('fname').value.trim();
+    const email=document.getElementById('email').value.trim();
+    const subject=document.getElementById('subject').value;
+    const message=document.getElementById('message').value.trim();
+    if(!fname||!email||!subject||!message){
+      alert('Please fill in all required fields marked with *');return;
+    }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+      alert('Please enter a valid email address');return;
+    }
+    document.getElementById('contactForm').style.display='none';
+    document.getElementById('formSuccess').style.display='block';
+    window.scrollTo({top:document.getElementById('formSuccess').offsetTop-100,behavior:'smooth'});
+  }
+</script>
+</body>
+</html>
